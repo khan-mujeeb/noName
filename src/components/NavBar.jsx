@@ -5,7 +5,7 @@ export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     return (
-        <div className="flex items-center justify-around border-b border-gray-400 py-8">
+        <div className="flex items-center justify-around border-b border-gray-400 py-8 h-28">
             <img className=" w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
@@ -37,19 +37,19 @@ export default function NavBar() {
                             </svg>
                         </div>
                         <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                            <li className="border-b border-gray-400 my-8 uppercase">
+                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/about">About</a>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase">
+                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/experience">Experience</a>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase">
+                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/skills">Skills</a>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase">
+                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/project">Project</a>
                             </li>
-                            <li className="border-b border-gray-400 my-8 uppercase">
+                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/contact">Contact</a>
                             </li>
                         </ul>
@@ -58,19 +58,19 @@ export default function NavBar() {
 
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
                     <li>
-                        <a href="/about">About</a>
+                        <a className="text-2xl" href="/about">About</a>
                     </li>
                     <li>
-                        <a href="/experience">Experience</a>
+                        <a className="text-2xl" href="/experience">Experience</a>
                     </li>
                     <li>
-                        <a href="/skills">Skills</a>
+                        <a className="text-2xl" href="/skills">Skills</a>
                     </li>
                     <li>
-                        <a href="/project">Project</a>
+                        <a className="text-2xl" href="/project">Project</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a className="text-2xl" href="/contact">Contact</a>
                     </li>
                 </ul>
             </nav>
