@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import dp from "../assets/img/dp.svg";
+import dp from "../assets/img/person.gif";
 import hi from "../assets/img/Hi.gif";
 import Typed from "react-typed";
 import github from "../assets/img/social/github.png";
@@ -13,11 +13,12 @@ export default class HeroSection extends Component {
         return (
             <div className=" h-[85vh] flex justify-center items-center flex-wrap lg:gap-36 md:gap-28 sm:gap-24 ">
                 {/* dp  */}
-                <div
-                    className=" lg:h-96 lg:w-96  sm:h-60 sm:w-60 h-56 w-56 rounded-full bg-black overflow-clip flex justify-center items-center"
+                {/* <div
+                    className=" lg:h-96 lg:w-96  sm:h-60 sm:w-60 h-56 w-56 flex justify-center items-center"
                 >
-                    <img className="h-full w-full" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZ3JhbW1lcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="" />
-                </div>
+                    
+                </div> */}
+                <img className=" lg:h-96 lg:w-[500px]  sm:h-60 sm:w-[300px] h-56 w-[300px] " src={dp} alt="" />
 
                 {/* info  */}
                 <div className="flex flex-col items-center justify-center gap-4 w-96">
@@ -50,17 +51,17 @@ export default class HeroSection extends Component {
                     </div>
 
                     {/* buttons  */}
-                    <div className="flex gap-6">
-                        <button className=" rounded-3xl bg-white p-3 border-black border-2">
+                    <div className="flex gap-6 mt-1">
+                        <button className=" rounded-3xl bg-white p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold">
                             Download CV
                         </button>
-                        <button className="rounded-3xl bg-black p-3 text-white">
+                        <button className="rounded-3xl bg-black p-3 text-white font-semibold">
                             Contact Info
                         </button>
                     </div>
 
                     {/* social profile  */}
-                    <div className="flex gap-4">
+                    <div className="flex gap-6 mt-2">
                         <a
                             href=""
                             className="group flex flex-col items-center justify-center gap-1"

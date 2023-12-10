@@ -1,6 +1,6 @@
 import React from "react";
 import InfoBlock from "./InfoBlock.jsx";
-import { FaSchool, FaUserAlt } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import { MdDateRange } from "react-icons/md";
