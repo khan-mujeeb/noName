@@ -11,7 +11,7 @@ import medium from "../assets/img/social/medium.png";
 export default class HeroSection extends Component {
     render() {
         return (
-            <div className=" h-[85vh] flex justify-center items-center flex-wrap lg:gap-36 md:gap-28 sm:gap-24 ">
+            <div className=" h-[85vh] flex justify-center items-center flex-wrap lg:gap-36 md:gap-28 sm:gap-24 bg-blue-300">
                 {/* dp  */}
                 {/* <div
                     className=" lg:h-96 lg:w-96  sm:h-60 sm:w-60 h-56 w-56 flex justify-center items-center"
