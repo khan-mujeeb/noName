@@ -1,8 +1,8 @@
-import React from "react";
 import HeroSection from "./components/HeroSection.jsx";
 import NavBar from "./components/NavBar.jsx";
 import AboutSection from "./components/AboutSection.jsx";
 import SKillsSection from "./components/SkillsSection.jsx";
+import ProjectSection from "./components/ProjectSection.jsx";
 NavBar
 function App() {
     return (
@@ -18,6 +18,9 @@ function App() {
 
             {/* skills section  */}
             <SKillsSection />
+
+            {/* project section */}
+            <ProjectSection />
         </div>
     );
 }
