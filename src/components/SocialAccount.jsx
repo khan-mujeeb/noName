@@ -2,8 +2,8 @@ import React from "react";
 
 const SocialAccount = ({icon, url, title}) => {
     return (
-        <a href={url} target="_blank" rel="noreferrer" className="flex w-96">
-            <div className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl rounded-full h-14 w-14 sm:h-16 sm:w-16 grid place-items-center group">
+        <a href={url} target="_blank" rel="noreferrer" className="flex">
+            <div className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl bg-blue-100 rounded-full h-14 w-14 sm:h-16 sm:w-16 grid place-items-center group">
                 <span>
                     {icon}
                 </span>
