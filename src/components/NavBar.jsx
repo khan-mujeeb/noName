@@ -58,10 +58,10 @@ export default function NavBar() {
 
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
                     <li>
-                        <a className="text-2xl" href="/about">About</a>
+                        <a className="text-2xl" href="/about">Home</a>
                     </li>
                     <li>
-                        <a className="text-2xl" href="/experience">Experience</a>
+                        <a className="text-2xl" href="/experience">About</a>
                     </li>
                     <li>
                         <a className="text-2xl" href="/skills">Skills</a>

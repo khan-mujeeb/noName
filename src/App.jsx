@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "./components/HeroSection.jsx";
 import NavBar from "./components/NavBar.jsx";
 import AboutSection from "./components/AboutSection.jsx";
+import SKillsSection from "./components/SkillsSection.jsx";
 NavBar
 function App() {
     return (
@@ -14,6 +15,9 @@ function App() {
 
             {/* about section  */}
             <AboutSection />
+
+            {/* skills section  */}
+            <SKillsSection />
         </div>
     );
 }
