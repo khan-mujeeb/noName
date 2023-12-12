@@ -6,7 +6,6 @@ import { LuGithub } from "react-icons/lu";
 const ProjectSection = () => {
     const [type, setType] = useState("web");
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    const [webActive, setWebActive] = useState(true);
 
     console.log(projects);
 
@@ -17,9 +16,9 @@ const ProjectSection = () => {
     }, [type]);
 
     return (
-        <div className="flex flex-col gap-20 items-center">
+        <div className="flex flex-col items-center mt-36">
             <PageTitle title="Projects" subTitle="Browse My Recent" />
-            <div className="flex gap-10">
+            <div className="flex gap-10 mt-10">
                 <button
                     className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
                     style={{
@@ -43,7 +42,7 @@ const ProjectSection = () => {
                 </button>
             </div>
 
-            <div className="flex justify-center items-center flex-col">
+            <div className="flex justify-center items-center flex-col mt-20">
                 <div className="grid grid-cols-2 gap-10">
                     {filteredProjects.map((project) => (
                         <div
