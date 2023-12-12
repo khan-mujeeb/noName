@@ -5,8 +5,8 @@ import Typed from "react-typed";
 import github from "../assets/img/social/github.png";
 import linkedin from "../assets/img/social/linkedin.png";
 import twitter from "../assets/img/social/twitter.png";
-
 import medium from "../assets/img/social/medium.png";
+import socialLinks from "../data/socialProfile";
 
 export default class HeroSection extends Component {
     render() {
@@ -63,7 +63,7 @@ export default class HeroSection extends Component {
                     {/* social profile  */}
                     <div className="flex gap-6 mt-2">
                         <a
-                            href=""
+                            href= {socialLinks.LinkedIn}
                             className="group flex flex-col items-center justify-center gap-1"
                         >
                             <img className=" h-14 w-14" src={linkedin} alt="" />

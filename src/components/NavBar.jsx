@@ -5,7 +5,7 @@ export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     return (
-        <div className="flex items-center justify-around border-b border-gray-400 py-8 h-28">
+        <div className=" z-50 flex items-center justify-around border-b border-gray-400 py-8 h-28 fixed w-full backdrop-blur-3xl">
             <img className=" w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
