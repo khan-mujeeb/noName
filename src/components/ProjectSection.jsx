@@ -15,7 +15,7 @@ const ProjectSection = () => {
     }, [type]);
 
     return (
-        <div className="">
+        <div className="flex flex-col gap-20 items-center">
             <PageTitle title="Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10">
                 <button onClick={() => setType("web")}>Web</button>
@@ -31,7 +31,7 @@ const ProjectSection = () => {
                                 <iframe
                                     width="90%"
                                     height="275"
-                                    src="https://www.youtube.com/embed/NXhjTHmQio4"
+                                    src= {project.youtube}
                                     title="YouTube video player"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
