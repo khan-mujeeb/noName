@@ -6,6 +6,7 @@ import { LuGithub } from "react-icons/lu";
 const ProjectSection = () => {
     const [type, setType] = useState("web");
     const [filteredProjects, setFilteredProjects] = useState(projects);
+    const [webActive, setWebActive] = useState(true);
 
     console.log(projects);
 
@@ -19,8 +20,27 @@ const ProjectSection = () => {
         <div className="flex flex-col gap-20 items-center">
             <PageTitle title="Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10">
-                <button onClick={() => setType("web")}>Web</button>
-                <button onClick={() => setType("android")}>Android</button>
+                <button
+                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
+                    style={{
+                        backgroundColor: type === "web" ? "black" : "white",
+                        color: type === "web" ? "white" : "black",
+                    }}
+                    onClick={() => setType("web")}
+                >
+                    Web
+                </button>
+
+                <button
+                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
+                    style={{
+                        backgroundColor: type === "android" ? "black" : "white",
+                        color: type === "android" ? "white" : "black",
+                    }}
+                    onClick={() => setType("android")}
+                >
+                    Android
+                </button>
             </div>
 
             <div className="flex justify-center items-center flex-col">
@@ -36,8 +56,12 @@ const ProjectSection = () => {
                                         {project.name}
                                     </h1>
 
-                                    <a target="_blank" rel="noreferrer" href={project.github}>
-                                        <LuGithub/>
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href={project.github}
+                                    >
+                                        <LuGithub />
                                     </a>
                                 </div>
 
