@@ -1,5 +1,6 @@
 import EducationSection from "./AboutSection/EducationSection.jsx";
 import PersonalInfo from "./AboutSection/PersonalInfo.jsx";
+import PageTitle from "./PageTitle.jsx";
 
 import dp from "../assets/img/dp.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
@@ -8,10 +9,9 @@ import "react-tabs/style/react-tabs.css";
 const AboutSection = () => {
     return (
         <div className="h-full gap-28 flex flex-col items-center justify-center ">
-            <div className="flex flex-col gap-1 items-center">
-                <p className="text-lg">Get To Know More</p>
-                <h2 className="text-5xl font-bold">About Me</h2>
-            </div>
+
+            <PageTitle subTitle="Get To Know More" title="About Me" />
+
             <div className="flex gap-36 justify-center items-center ">
                 {/* image */}
                 <div className="rounded-full overflow-clip h-96 w-96 flex justify-center items-center ">

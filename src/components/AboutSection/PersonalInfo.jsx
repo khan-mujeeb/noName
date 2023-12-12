@@ -10,9 +10,7 @@ const PersonalInfo = () => {
     return <div className="flex flex-col w-full gap-10">
     {/* description  */}
     <div>
-        I am a currently pursuing Bachelors in Information Technology from Pune
-        University. I've a good coding experience in Android Development, C++,
-        Core Java and currently exploring MERN stack
+        {"I am a currently pursuing Bachelors in Information Technology from Pune University. I've a good coding experience in Android Development, C++, Core Java and currently exploring MERN stack"}
     </div>
 
     {/* info  */}
