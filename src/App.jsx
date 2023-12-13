@@ -5,6 +5,7 @@ import SKillsSection from "./components/SkillsSection.jsx";
 import ProjectSection from "./components/ProjectSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import FooterSection from "./components/FooterSection.jsx";
+import ParticleBg from "./components/ParticleBg.jsx";
 
 function App() {
     return (
@@ -12,22 +13,36 @@ function App() {
             {/* nav bar */}
             <NavBar />
 
-            {/* hero section  */}
-            <HeroSection />
+            <div className=" min-h-screen flex flex-col">
+                <div className=" absolute">
+                    <ParticleBg />
+                </div>
+                {/* hero section  */}
+                <div className="h-screen relative">
+                    <HeroSection />
+                </div>
 
-            <AboutSection />
-
-            {/* skills section  */}
-            <SKillsSection />
-
-            {/* project section */}
-            <ProjectSection />
-
-            {/* contact me section */}
-            <ContactSection />
-
-            {/* footer  */}
-            <FooterSection />
+                <div className="relative">
+                    <AboutSection className=" relative" />
+                </div>
+                <div className="relative">
+                    {/* skills section  */}
+                    <SKillsSection />
+                </div>
+                <div className="relative">
+                    {/* project section */}
+                    <ProjectSection />
+                </div>
+                <div className="relative">
+                    {/* contact me section */}
+                    <ContactSection />
+                </div>
+                <div className="relative">
+                    {/* footer  */}
+                    <FooterSection />
+                </div>
+                <div className="relative"></div>
+            </div>
         </div>
     );
 }
