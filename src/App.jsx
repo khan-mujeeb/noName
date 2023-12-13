@@ -15,7 +15,6 @@ function App() {
             {/* hero section  */}
             <HeroSection />
 
-            {/* about section  */}
             <AboutSection />
 
             {/* skills section  */}
@@ -28,7 +27,7 @@ function App() {
             <ContactSection />
 
             {/* footer  */}
-            <FooterSection/>
+            <FooterSection />
         </div>
     );
 }

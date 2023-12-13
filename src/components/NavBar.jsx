@@ -3,9 +3,19 @@ import mk_logo from "../assets/img/mk_logo.png";
 
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const handleNavigation = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        console.log("mujeeb " + sectionId);
+        console.log("cscs")
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+            setIsNavOpen(false); // Close the mobile menu after clicking a link
+        }
+    };
+
 
     return (
-        <div className=" z-50 flex items-center justify-around border-b border-gray-400 py-8 h-28 fixed w-full backdrop-blur-3xl">
+        <div className=" z-50 flex items-center justify-around border-b border-gray-400 py-8 h-28 fixed w-full backdrop-blur-lg">
             <img className=" w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
@@ -38,7 +48,7 @@ export default function NavBar() {
                         </div>
                         <ul className="flex flex-col items-center justify-between min-h-[250px]">
                             <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a href="/about">About</a>
+                                <a onClick={handleNavigation("hom")} href="/about">About</a>
                             </li>
                             <li className="border-b border-gray-400 my-8 uppercase text-xl">
                                 <a href="/experience">Experience</a>
@@ -58,13 +68,12 @@ export default function NavBar() {
 
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
                     <li>
-                        <a className="text-2xl" href="/about">Home</a>
+                        <a onClick={handleNavigation("home")} className="text-2xl" href="/home">Home</a>
                     </li>
                     <li>
-                        <a className="text-2xl" href="/experience">About</a>
+                        <a onClick={handleNavigation("about")} className="text-2xl" href="/about">About</a>
                     </li>
-                    <li>
-                        <a className="text-2xl" href="/skills">Skills</a>
+                    <li onClick={handleNavigation("skills")} className="text-2xl" >Skills
                     </li>
                     <li>
                         <a className="text-2xl" href="/project">Project</a>

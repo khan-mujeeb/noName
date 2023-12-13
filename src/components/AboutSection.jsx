@@ -7,8 +7,9 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const AboutSection = () => {
+    
     return (
-        <div className="h-full gap-28 flex flex-col items-center justify-center ">
+        <div id="about" className="h-screen w-scree gap-28 flex flex-col items-center justify-center ">
 
             <PageTitle subTitle="Get To Know More" title="About Me" />
 

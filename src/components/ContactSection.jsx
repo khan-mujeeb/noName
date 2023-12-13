@@ -5,15 +5,13 @@ import { FaPhone } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 
 import { FaLocationDot } from "react-icons/fa6";
-import { CiUser } from "react-icons/ci";
 import { FiMessageSquare } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { CiSquareChevLeft } from "react-icons/ci";
-import { Input } from "postcss";
 
 const ContactSection = () => {
     return (
-        <div className="flex flex-col mt-36 ">
+        <div id="contact" className="flex flex-col mt-36 ">
             <PageTitle title="Contact Me" subTitle={"say Hello"} />
             <div className="flex justify-around items-center">
                 <div className="w-96 flex flex-col gap-4">

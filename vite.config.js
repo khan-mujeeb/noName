@@ -10,6 +10,9 @@ export default defineConfig({
     emptyOutDir: true, // Clean the output directory before building
     assetsInlineLimit: 0, // Ensure all assets are bundled properly
   },
+  optimizeDeps: {
+    exclude: ['js-big-decimal']
+  }
 })
 
 
