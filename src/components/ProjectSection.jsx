@@ -16,7 +16,7 @@ const ProjectSection = () => {
     }, [type]);
 
     return (
-        <div id="project" className="flex flex-col items-center mt-36">
+        <div id="project" className="select-none flex flex-col items-center mt-36">
             <PageTitle title="Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10 mt-10">
                 <button

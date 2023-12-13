@@ -18,7 +18,7 @@ import java from "../assets/img/stack/java.png";
 import firebase from "../assets/img/stack/firebase.png";
 const SkillsSection = () => {
     return (
-        <div id="skills" className="flex items-center flex-col gap-36 mt-10">
+        <div id="skills" className="select-none flex items-center flex-col gap-36 mt-10">
             <PageTitle subTitle="What I do" title="My Skills" />
 
             {/* front-end  */}
