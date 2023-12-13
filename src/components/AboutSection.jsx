@@ -1,11 +1,10 @@
 import EducationSection from "./AboutSection/EducationSection.jsx";
 import PersonalInfo from "./AboutSection/PersonalInfo.jsx";
 import PageTitle from "./PageTitle.jsx";
-
 import dp from "../assets/img/dp.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-
+import "./AboutSection/Ab.css"
 const AboutSection = () => {
     
     return (
@@ -15,7 +14,7 @@ const AboutSection = () => {
 
             <div className="flex gap-36 justify-center items-center ">
                 {/* image */}
-                <div className="rounded-full overflow-clip h-96 w-96 flex justify-center items-center ">
+                <div id="floating" className="rounded-full overflow-clip h-96 w-96 flex justify-center items-center shadow-sm shadow-black ">
                     <img src={dp} alt="" />
                 </div>
 
@@ -40,6 +39,6 @@ const AboutSection = () => {
             </div>
         </div>
     );
-};
+}
 
 export default AboutSection;
