@@ -10,12 +10,9 @@ import ParticleBg from "./components/ParticleBg.jsx";
 function App() {
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
-        console.log("mujeeb " + sectionId);
-        console.log("cscs")
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
-        
     };
 
     return (

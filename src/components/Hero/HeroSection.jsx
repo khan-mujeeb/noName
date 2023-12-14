@@ -16,14 +16,9 @@ const HeroSection = () => {
     return (
         
         <div id="hero" className="select-none h-full flex justify-center items-center flex-wrap lg:gap-36 md:gap-28 sm:gap-24 mt-10">
-            {/* dp  */}
-            {/* <div
-                    className=" lg:h-96 lg:w-96  sm:h-60 sm:w-60 h-56 w-56 flex justify-center items-center"
-                >
 
-                </div> */}
             <img
-                className=" lg:h-[500px]  lg:w-[500px]  sm:h-60 sm:w-[300px] h-56 w-[300px] "
+                className="lg:h-[500px]  lg:w-[500px]  sm:h-60 sm:w-[300px] h-56 w-[300px] "
                 src={dp}
                 alt=""
             />

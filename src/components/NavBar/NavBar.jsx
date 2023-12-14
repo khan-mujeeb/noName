@@ -5,8 +5,8 @@ export default function NavBar({ handleNavigation }) {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     return (
-        <div className="select-none z-50 flex items-center justify-around border-b border-gray-400 py-8 h-28 fixed w-full backdrop-blur-lg">
-            <img className=" w-36" src={mk_logo} alt="" />
+        <div className="select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg md:max-2xl:h-28 lg:max-2xl:justify-around justify-between">
+            <img className="w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
                     <div
@@ -62,7 +62,7 @@ export default function NavBar({ handleNavigation }) {
                     {navList.map((item) => (
                         <li
                             key={item.id}
-                            className="text-xl"
+                            className="text-xl hover:font-semibold transition-all duration-200"
                             href="/about"
                             onClick={() => handleNavigation(item.id)}
                         >
