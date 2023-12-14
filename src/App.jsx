@@ -20,7 +20,7 @@ function App() {
             {/* nav bar */}
             <NavBar handleNavigation={handleNavigation} />
 
-            <div className=" min-h-screen flex flex-col">
+            <div className=" min-h-screen flex flex-col p-1">
                 <div className=" absolute">
                     <ParticleBg />
                 </div>

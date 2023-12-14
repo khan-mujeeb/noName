@@ -18,19 +18,19 @@ import java from "../../assets/img/stack/java.png";
 import firebase from "../../assets/img/stack/firebase.png";
 const SkillsSection = () => {
     return (
-        <div  className="select-none flex items-center flex-col gap-36 mt-10">
+        <div  className="select-none flex items-center flex-col md:max-2xl:gap-36 gap-16 md:max-2xl:mt-28 mt-16">
             <PageTitle subTitle="What I do" title="My Skills" />
 
             {/* front-end  */}
-            <div className="flex items-center justify-center gap-36">
-                <img className=" w-[500px]" src={webDev} alt="" />
+            <div className="flex items-center justify-center md:max-2xl:flex-row lg:max-2xl:gap-36 flex-col-reverse gap-10">
+                <img className="lg:max-2xl:w-[500px] w-80" src={webDev} alt="" />
 
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
                     <h2 className="text-3xl font-semibold">
                         Front End Developmet
                     </h2>
                     {/* tech stack */}
-                    <div className="flex gap-4 justify-center flex-wrap w-[500px]">
+                    <div className="flex gap-4 justify-center flex-wrap md:max-2xl:[500px] w-96">
                         <TechStack title="HTML5" icon={html} />
                         <TechStack title="CSS3" icon={css} />
                         <TechStack title="JavaScript" icon={js} />
@@ -43,7 +43,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* description  */}
-                    <ul className=" self-start">
+                    <ul className="md:max-2xl:self-start">
                         <li className=" list-disc">Responsive Web Design</li>
                         <li className=" list-disc">Single Page Application</li>
                         <li className=" list-disc">Progressive Web Application</li>
@@ -52,13 +52,13 @@ const SkillsSection = () => {
             </div>
 
             {/* android dev  */}
-            <div className="flex items-center justify-center gap-36 ">
+            <div className="flex items-center justify-center md:max-2xl:flex-row lg:max-2xl:gap-36 flex-col gap-10 ">
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
                     <h2 className="text-3xl font-semibold">
                         Android App Developmet
                     </h2>
                     {/* tech stack */}
-                    <div className="flex justify-between flex-wrap w-[500px]">
+                    <div className="flex justify-between flex-wrap md:max-2xl:[500px] w-96">
                         <TechStack title="Android" icon={android} />
                         <TechStack title="Android Studio" icon={androidStudio} />
                         <TechStack title="Kotlin" icon={kotlin} />
@@ -69,7 +69,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* description  */}
-                    <ul className=" self-start ">
+                    <ul className="md:max-2xl:self-start">
                         <li className=" list-disc">Native Android App</li>
                         <li className=" list-disc">Android App with Firebase</li>
                         <li className=" list-disc">Android App with Rest API</li>
@@ -77,7 +77,7 @@ const SkillsSection = () => {
                     </ul>
                 </div>
 
-                <img className=" w-[500px]" src={androidDev} alt="" />
+                <img className="lg:max-2xl:w-[500px] w-80" src={androidDev} alt="" />
             </div>
         </div>
     );
