@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import PageTitle from "../PageTitle";
 import projects from "../../data/projectData";
 import { LuGithub } from "react-icons/lu";
+import { FaGooglePlay } from "react-icons/fa";
+
 
 const ProjectSection = () => {
     const [type, setType] = useState("web");
@@ -16,7 +18,10 @@ const ProjectSection = () => {
     }, [type]);
 
     return (
-        <div id="project" className="select-none flex flex-col items-center mt-36">
+        <div
+            id="project"
+            className="select-none flex flex-col items-center mt-36"
+        >
             <PageTitle title="Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10 mt-10">
                 <button
@@ -62,6 +67,22 @@ const ProjectSection = () => {
                                     >
                                         <LuGithub />
                                     </a>
+
+                                    {project.executable.length !== 0 ? (
+                                        <a
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl bg-blue-100 rounded-full h-10 w-10 sm:h-10 sm:w-10 grid place-items-center group"
+                                            href={project.executable}
+                                        >
+                                            <span>
+                                                <FaGooglePlay />
+                                            </span>
+                                            <div className="opacity-0 invisible w-max group-hover:opacity-100 group-hover:visible absolute -top-8 rounded capitalize bg-slate-900/75 dark:bg-slate-700/90 text-white dark:text-slate-100 py-1 px-2 text-sm duration-200">
+                                                {"PlayStore"}
+                                            </div>
+                                        </a>
+                                    ) : null}
                                 </div>
 
                                 <iframe
@@ -76,7 +97,7 @@ const ProjectSection = () => {
                                 <p className=" text-sm text-gray-600">
                                     {project.description}
                                 </p>
-                                <div className="flex gap-4">
+                                <div className="flex gap-4 flex-wrap">
                                     {project.skills.map((tag, tagId) => (
                                         <div
                                             key={tagId}
