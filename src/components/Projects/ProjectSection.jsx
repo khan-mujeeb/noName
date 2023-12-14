@@ -18,7 +18,7 @@ const ProjectSection = () => {
 
     return (
         <div
-            className="select-none flex flex-col items-center mt-28"
+            className="select-none flex flex-col items-center mt-28 "
         >
             <PageTitle title="Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10 mt-10">

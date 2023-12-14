@@ -13,7 +13,7 @@ const ParticleBg = () => {
     const particlesLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
-
+    // #131B23
     return (
         <div className="max-h-screen">
             <Particles
@@ -24,7 +24,7 @@ const ParticleBg = () => {
                     background: {
                         size: "cover",
                         color: {
-                            value: "#131B23",
+                            value: "#ffffff",
                         },
                     },
                     fpsLimit: 120,

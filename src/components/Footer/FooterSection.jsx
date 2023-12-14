@@ -8,11 +8,11 @@ import socialLinks from "../../data/socialProfile.js";
 const FooterSection = () => {
     return (
         <footer className="flex p-10 bg-violet-600 mt-60 justify-between items-center">
-            <p className="text-4xl text-white font-semibold">
+            <p className="lg:max-2xl:text-4xl text-2xl text-white font-semibold">
                 Mujeeb Ur Rahman Khan
             </p>
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 flex-wrap">
                 <SocialAccount
                     icon={<FaLinkedin />}
                     url={socialLinks.LinkedIn}

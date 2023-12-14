@@ -7,7 +7,7 @@ const ProjectListItem = ({ project }) => {
     return (
         <div
             key={project.id}
-            className="sm:max-2xl:w-[550px]  md:max-2xl:p-10 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm"
+            className="sm:max-2xl:w-[550px]  md:max-2xl:p-10 p-3 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm"
         >
             <div className="flex flex-col gap-4 items-center">
                 <div className="flex justify-between items-center w-full">

@@ -55,7 +55,7 @@ const SkillsSection = () => {
             <div className="flex items-center justify-center md:max-2xl:flex-row lg:max-2xl:gap-36 flex-col gap-10 ">
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
                     <h2 className="text-3xl font-semibold">
-                        Android App Developmet
+                        Android Developmet
                     </h2>
                     {/* tech stack */}
                     <div className="flex justify-between flex-wrap md:max-2xl:[500px] w-96">
