@@ -15,28 +15,28 @@ const HeroSection = () => {
 
     return (
         
-        <div id="hero" className="select-none h-full flex justify-center items-center flex-wrap lg:gap-36 md:gap-28 sm:gap-24 mt-10">
+        <div id="hero" className="select-none h-full flex justify-center items-center lg:max-2xl:gap-28 mt-10 lg:max-2xl:flex-row flex-col gap-10">
 
             <img
-                className="lg:h-[500px]  lg:w-[500px]  sm:h-60 sm:w-[300px] h-56 w-[300px] "
+                className="lg:max-2xl:h-[500px]  lg:max-2xl:lg:w-[500px]  h-60 w-[300px] "
                 src={dp}
                 alt=""
             />
 
             {/* info  */}
-            <div className="flex flex-col items-center justify-center gap-4 w-96">
+            <div className="flex flex-col items-center justify-center gap-6 w-96">
                 <img className="h-10 w-10" src={hi} alt="" />
 
                 {/* hello message  */}
                 <div className="flex items-center gap-2 font-semibold text-text_secondary">
-                    <h4 className=" text-xl">{"Hello, I'm"}</h4>
+                    <h4 className=" lg:max-2xl:text-xl text-lg">{"Hello, I'm"}</h4>
                 </div>
 
                 {/* name  */}
-                <h1 className=" font-semibold text-[3rem]">Mujeeb Khan</h1>
+                <h1 className=" font-semibold lg:max-2xl:text-[3rem] text-3xl">Mujeeb Khan</h1>
 
                 {/* job title  */}
-                <div className="hero-section-left-subheading flex gap-2 text-3xl w-full font-semibold text-text_secondary">
+                <div className="hero-section-left-subheading flex gap-2 lg:max-2xl:text-3xl text-2xl w-full font-semibold text-text_secondary">
                     <div className=" inline">I am </div>
                     <Typed
                         strings={[
@@ -55,10 +55,10 @@ const HeroSection = () => {
 
                 {/* buttons  */}
                 <div className="flex gap-6 mt-1">
-                    <a href= {resume} download={"mujeeb_khan_resume"} className=" rounded-3xl bg-white p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold">
+                    <a href= {resume} download={"mujeeb_khan_resume"} className="flex items-center justify-center rounded-3xl bg-white p-2 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold lg:max-2xl:p-3 lg:max-2xl:text-md text-sm">
                         Download CV
                     </a>
-                    <button className="rounded-3xl bg-black p-3 text-white font-semibold">
+                    <button className="rounded-3xl bg-black p-3 lg:max-2xl:p-3 text-sm text-white font-semibold">
                         Contact Info
                     </button>
                 </div>
