@@ -1,7 +1,7 @@
 import React from "react";
 import { LuGithub } from "react-icons/lu";
 import { FaGooglePlay } from "react-icons/fa";
-
+import ProjectShareable from "./ProjectShareable.jsx";
 
 const ProjectListItem = ({ project }) => {
     return (
@@ -15,24 +15,10 @@ const ProjectListItem = ({ project }) => {
                         {project.name}
                     </h1>
 
-                    <a target="_blank" rel="noreferrer" href={project.github}>
-                        <LuGithub />
-                    </a>
+                    <ProjectShareable url={project.github} icon={<LuGithub />} name={"Github"} />
 
                     {project.executable.length !== 0 ? (
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl bg-blue-100 rounded-full h-10 w-10 sm:h-10 sm:w-10 grid place-items-center group"
-                            href={project.executable}
-                        >
-                            <span>
-                                <FaGooglePlay />
-                            </span>
-                            <div className="opacity-0 invisible w-max group-hover:opacity-100 group-hover:visible absolute -top-8 rounded capitalize bg-slate-900/75 dark:bg-slate-700/90 text-white dark:text-slate-100 py-1 px-2 text-sm duration-200">
-                                {"PlayStore"}
-                            </div>
-                        </a>
+                        <ProjectShareable url={project.executable} icon={<FaGooglePlay />} name={"PlayStore"} />
                     ) : null}
                 </div>
 

@@ -1,7 +1,7 @@
 import EducationSection from "./EducationSection.jsx";
 import PersonalInfo from "./PersonalInfo.jsx";
 import PageTitle from "../PageTitle.jsx";
-import dp from "../../assets/img/person.png";
+import dp from "../../assets/img/dp.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./Ab.css"

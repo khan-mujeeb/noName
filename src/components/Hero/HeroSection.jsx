@@ -7,6 +7,7 @@ import twitter from "../../assets/img/social/twitter.png";
 import medium from "../../assets/img/social/medium.png";
 import socialLinks from "../../data/socialProfile";
 import resume from "../../assets/resume.pdf";
+import SocialAccountHoverLine from "./SocialAccountHoverLine.jsx";
 
 
 
@@ -68,48 +69,11 @@ const HeroSection = () => {
                 </div>
 
                 {/* social profile  */}
-                <div className="flex gap-6 mt-2">
-                    <a
-                        href={socialLinks.LinkedIn}
-                        className="group flex flex-col items-center justify-center gap-1"
-                    >
-                        <img className=" h-14 w-14" src={linkedin} alt="" />
-                        <div>
-                            <h2>Linkedin</h2>
-                            <div className="line h-1 bg-black rounded-r-lg w-0 group-hover:w-full transition-all duration-600"></div>
-                        </div>
-                    </a>
-                    <a
-                        href=""
-                        className="group flex flex-col items-center justify-center gap-1"
-                    >
-                        <img className=" h-14 w-14" src={github} alt="" />
-                        <div>
-                            <h2>Github</h2>
-                            <div className="line h-1 bg-black rounded-r-lg w-0 group-hover:w-full transition-all duration-600"></div>
-                        </div>
-                    </a>
-                    <a
-                        href=""
-                        className="group flex flex-col items-center justify-center gap-1"
-                    >
-                        <img className=" h-14 w-14" src={twitter} alt="" />
-                        <div>
-                            <h2>Twitter</h2>
-                            <div className="line h-1 bg-black rounded-r-lg w-0 group-hover:w-full transition-all duration-600"></div>
-                        </div>
-                    </a>
-
-                    <a
-                        href=""
-                        className="group flex flex-col items-center justify-center gap-1"
-                    >
-                        <img className=" h-14 w-14" src={medium} alt="" />
-                        <div>
-                            <h2>Blog</h2>
-                            <div className="line h-1 bg-black rounded-r-lg w-0 group-hover:w-full transition-all duration-700"></div>
-                        </div>
-                    </a>
+                <div className="flex gap-6 mt-2 flex-wrap">
+                    <SocialAccountHoverLine name="Linkedin" icon={linkedin} url={socialLinks.LinkedIn} />
+                    <SocialAccountHoverLine name="Github" icon={github} url={socialLinks.GitHub} />
+                    <SocialAccountHoverLine name="Twitter" icon={twitter} url={socialLinks.Twitter} />
+                    <SocialAccountHoverLine name="Blog" icon={medium} url={socialLinks.Medium} />
                 </div>
             </div>
         </div>
