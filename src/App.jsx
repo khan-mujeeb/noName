@@ -1,10 +1,10 @@
-import HeroSection from "./components/HeroSection.jsx";
-import NavBar from "./components/NavBar.jsx";
-import AboutSection from "./components/AboutSection.jsx";
-import SKillsSection from "./components/SkillsSection.jsx";
-import ProjectSection from "./components/ProjectSection.jsx";
-import ContactSection from "./components/ContactSection.jsx";
-import FooterSection from "./components/FooterSection.jsx";
+import HeroSection from "./components/Hero/HeroSection.jsx";
+import NavBar from "./components/NavBar/NavBar.jsx";
+import AboutSection from "./components/AboutSection/AboutSection.jsx";
+import SKillsSection from "./components/Skills/SkillsSection.jsx";
+import ProjectSection from "./components/Projects/ProjectSection.jsx";
+import ContactSection from "./components/ContactUs/ContactSection.jsx";
+import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 
 function App() {

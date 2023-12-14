@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mk_logo from "../assets/img/mk_logo.png";
+import mk_logo from "../../assets/img/mk_logo.png";
 
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);

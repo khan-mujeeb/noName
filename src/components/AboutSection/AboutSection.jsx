@@ -1,10 +1,10 @@
-import EducationSection from "./AboutSection/EducationSection.jsx";
-import PersonalInfo from "./AboutSection/PersonalInfo.jsx";
-import PageTitle from "./PageTitle.jsx";
-import dp from "../assets/img/dp.svg";
+import EducationSection from "./EducationSection.jsx";
+import PersonalInfo from "./PersonalInfo.jsx";
+import PageTitle from "../PageTitle.jsx";
+import dp from "../../assets/img/person.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import "./AboutSection/Ab.css"
+import "./Ab.css"
 const AboutSection = () => {
     
     return (

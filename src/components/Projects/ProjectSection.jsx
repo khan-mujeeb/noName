@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import PageTitle from "./PageTitle";
-import projects from "../data/projectData";
+import PageTitle from "../PageTitle";
+import projects from "../../data/projectData";
 import { LuGithub } from "react-icons/lu";
 
 const ProjectSection = () => {

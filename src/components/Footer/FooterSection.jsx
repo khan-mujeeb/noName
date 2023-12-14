@@ -3,7 +3,7 @@ import SocialAccount from "./SocialAccount.jsx";
 import { FaGithub } from "react-icons/fa";
 import { FaStore } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
-import socialLinks from "../data/socialProfile.js";
+import socialLinks from "../../data/socialProfile.js";
 
 const FooterSection = () => {
     return (

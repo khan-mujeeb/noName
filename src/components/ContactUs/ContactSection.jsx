@@ -1,6 +1,6 @@
-import contactMe from "../assets/img/contact_me.svg";
-import PageTitle from "./PageTitle";
-import InfoBlock from "../components/AboutSection/InfoBlock.jsx";
+import contactMe from "../../assets/img/contact_me.svg";
+import PageTitle from "../PageTitle.jsx";
+import InfoBlock from "../AboutSection/InfoBlock.jsx";
 import { FaPhone } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 

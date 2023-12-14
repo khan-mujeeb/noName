@@ -1,11 +1,12 @@
-import dp from "../assets/img/person.png";
-import hi from "../assets/img/Hi.gif";
+import dp from "../../assets/img/person.png";
+import hi from "../../assets/img/Hi.gif";
 import Typed from "react-typed";
-import github from "../assets/img/social/github.png";
-import linkedin from "../assets/img/social/linkedin.png";
-import twitter from "../assets/img/social/twitter.png";
-import medium from "../assets/img/social/medium.png";
-import socialLinks from "../data/socialProfile";
+import github from "../../assets/img/social/github.png";
+import linkedin from "../../assets/img/social/linkedin.png";
+import twitter from "../../assets/img/social/twitter.png";
+import medium from "../../assets/img/social/medium.png";
+import socialLinks from "../../data/socialProfile";
+import resume from "../../assets/resume.pdf";
 
 
 
@@ -58,9 +59,9 @@ const HeroSection = () => {
 
                 {/* buttons  */}
                 <div className="flex gap-6 mt-1">
-                    <button className=" rounded-3xl bg-white p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold">
+                    <a href= {resume} download={"mujeeb_khan_resume"} className=" rounded-3xl bg-white p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold">
                         Download CV
-                    </button>
+                    </a>
                     <button className="rounded-3xl bg-black p-3 text-white font-semibold">
                         Contact Info
                     </button>
