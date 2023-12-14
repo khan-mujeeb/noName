@@ -14,7 +14,7 @@ const PersonalInfo = () => {
     </div>
 
     {/* info  */}
-    <div className="grid grid-cols-2 gap-x-16 gap-y-2">
+    <div className="grid lg:max-2xl:grid-cols-2 gap-x-16 gap-y-2">
         <InfoBlock icon={<FaUserAlt />} data="Mujeeb Khan" />
 
         <InfoBlock icon={<FaPhone />} data="+91 8766516237" />
@@ -28,7 +28,7 @@ const PersonalInfo = () => {
     </div>
     {/* languages  */}
     <div className="flex flex-col gap-1">
-        <h2>Language Skills</h2>
+        <h2 className=" font-semibold">Language Skills</h2>
         <div className="w-full h-[0.1px]  bg-gray-300"></div>
         <p>English, Hindi, Marathi</p>
     </div>

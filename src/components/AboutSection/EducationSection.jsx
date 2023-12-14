@@ -10,14 +10,17 @@ import { MdDateRange } from "react-icons/md";
 
 const EducationSection = () => {
     return (
-        <VerticalTimeline lineColor="black">
+        <VerticalTimeline lineColor="black"
+        >
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{
                     // background: "rgb(33, 150, 243)",
-                    height: "90px",
-                    width: "400px",
+                    height: "auto",
+                    width: "auto",
                     color: "#000",
+                    
+
                 }}
             >
                 <div className="flex flex-col">
@@ -28,7 +31,7 @@ const EducationSection = () => {
                         </h3>
                     </div>
 
-                    <div className="flex text-sm gap-2 items-center">
+                    <div className="flex text-sm gap-3 items-center">
                         <IoIosSchool />
                         <h4 className="vertical-timeline-element-subtitle text-sm">
                             PES Modern College of Engineering, Pune
@@ -47,12 +50,13 @@ const EducationSection = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{
                     // background: "rgb(33, 150, 243)",
-                    height: "90px",
-                    width: "400px",
+                    
+                    height: "auto",
+                    width: "auto",
                     color: "#000",
                 }}
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col justify-center">
                     <div className="flex gap-2 items-center">
                         <FaBook />
                         <h3 className="vertical-timeline-element-title text-sm">
@@ -60,7 +64,7 @@ const EducationSection = () => {
                         </h3>
                     </div>
 
-                    <div className="flex text-sm gap-2 items-center">
+                    <div className="flex text-sm gap-3 items-center">
                         <IoIosSchool />
                         <h4 className="vertical-timeline-element-subtitle text-sm">
                         Kendriya Vidyalaya No. 2, OFDR, Pune
