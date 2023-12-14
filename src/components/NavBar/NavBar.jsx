@@ -5,7 +5,7 @@ export default function NavBar({ handleNavigation }) {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     return (
-        <div className="select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg md:max-2xl:h-28 lg:max-2xl:justify-around justify-between">
+        <div className="select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-2xl:h-28 lg:max-2xl:justify-around justify-between">
             <img className="w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
