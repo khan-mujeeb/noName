@@ -63,5 +63,25 @@ let projects = [
         executable: "",
         type: "android",
     },
+    {
+        id: 5,
+        name: "Link Wallet",
+        description:
+            "A simple Google Chrome extension that is used to store all the important links like coding profles, github, linkedin, blog, personal portfolio etc. So that you can access it whenever your applying for your dream job.",
+        github: "https://github.com/khan-mujeeb/Link-Wallete",
+        youtube:
+            "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
+        skills: [
+            "Javascript",
+            "HTML",
+            "React.js",
+            "Local Storage",
+            "Tailwind CSS",
+            "Chrome Extension",
+        ],
+        executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
+        type: "web",
+    },
+
 ];
 export default projects;

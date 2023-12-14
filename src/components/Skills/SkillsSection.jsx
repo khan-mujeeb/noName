@@ -18,14 +18,14 @@ import java from "../../assets/img/stack/java.png";
 import firebase from "../../assets/img/stack/firebase.png";
 const SkillsSection = () => {
     return (
-        <div id="skills" className="select-none flex items-center flex-col gap-36 mt-10">
+        <div  className="select-none flex items-center flex-col gap-36 mt-10">
             <PageTitle subTitle="What I do" title="My Skills" />
 
             {/* front-end  */}
             <div className="flex items-center justify-center gap-36">
                 <img className=" w-[500px]" src={webDev} alt="" />
 
-                <div className="flex flex-col items-center gap-10">
+                <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
                     <h2 className="text-3xl font-semibold">
                         Front End Developmet
                     </h2>
@@ -52,8 +52,8 @@ const SkillsSection = () => {
             </div>
 
             {/* android dev  */}
-            <div className="flex items-center justify-center gap-36">
-                <div className="flex flex-col items-center gap-10 ">
+            <div className="flex items-center justify-center gap-36 ">
+                <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
                     <h2 className="text-3xl font-semibold">
                         Android App Developmet
                     </h2>

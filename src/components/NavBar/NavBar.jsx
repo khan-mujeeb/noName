@@ -1,18 +1,8 @@
 import { useState } from "react";
 import mk_logo from "../../assets/img/mk_logo.png";
-
-export default function NavBar() {
+import navList from "../../data/navigationData";
+export default function NavBar({ handleNavigation }) {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    const handleNavigation = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        console.log("mujeeb " + sectionId);
-        console.log("cscs")
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-            setIsNavOpen(false); // Close the mobile menu after clicking a link
-        }
-    };
-
 
     return (
         <div className="select-none z-50 flex items-center justify-around border-b border-gray-400 py-8 h-28 fixed w-full backdrop-blur-lg">
@@ -46,41 +36,39 @@ export default function NavBar() {
                                 <line x1="6" y1="6" x2="18" y2="18" />
                             </svg>
                         </div>
+
+                        {/* mobile  */}
                         <ul className="flex flex-col items-center justify-between min-h-[250px]">
-                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a onClick={handleNavigation("hom")} href="/about">About</a>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a href="/experience">Experience</a>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a href="/skills">Skills</a>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a href="/project">Project</a>
-                            </li>
-                            <li className="border-b border-gray-400 my-8 uppercase text-xl">
-                                <a href="/contact">Contact</a>
-                            </li>
+                            {navList.map((item) => (
+                                <li
+                                    key={item.id}
+                                    className="border-b border-gray-400 my-8 uppercase text-xl"
+                                    onClick={() => {
+                                        handleNavigation(item.id)
+                                        setIsNavOpen((prev) => !prev)
+                                    }}
+                                >
+                                    {item.name}
+                                </li>
+                            ))}
+
                         </ul>
                     </div>
                 </section>
 
+                {/* desktop  */}
+
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-                    <li>
-                        <a onClick={handleNavigation("home")} className="text-2xl" href="/home">Home</a>
-                    </li>
-                    <li>
-                        <a onClick={handleNavigation("about")} className="text-2xl" href="/about">About</a>
-                    </li>
-                    <li onClick={handleNavigation("skills")} className="text-2xl" >Skills
-                    </li>
-                    <li>
-                        <a className="text-2xl" href="/project">Project</a>
-                    </li>
-                    <li>
-                        <a className="text-2xl" href="/contact">Contact</a>
-                    </li>
+                    {navList.map((item) => (
+                        <li
+                            key={item.id}
+                            className="text-xl"
+                            href="/about"
+                            onClick={() => handleNavigation(item.id)}
+                        >
+                            {item.name}
+                        </li>
+                    ))}
                 </ul>
             </nav>
             <style>{`

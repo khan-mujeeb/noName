@@ -8,40 +8,56 @@ import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 
 function App() {
+    const handleNavigation = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        console.log("mujeeb " + sectionId);
+        console.log("cscs")
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        
+    };
+
     return (
         <div className=" w-screen h-screen overflow-x-hidden">
             {/* nav bar */}
-            <NavBar />
+            <NavBar handleNavigation={handleNavigation} />
 
             <div className=" min-h-screen flex flex-col">
                 <div className=" absolute">
                     <ParticleBg />
                 </div>
+
                 {/* hero section  */}
-                <div className="h-screen relative">
+                <div id="home" className="h-screen relative">
                     <HeroSection />
                 </div>
 
-                <div className="relative">
+                {/* about section  */}
+                <div id="about" className="relative">
                     <AboutSection className=" relative" />
                 </div>
-                <div className="relative">
-                    {/* skills section  */}
+
+                {/* skills section  */}
+                <div id="skills" className="relative">
                     <SKillsSection />
                 </div>
-                <div className="relative">
-                    {/* project section */}
+
+                {/* project section */}
+                <div id="project" className="relative">
                     <ProjectSection />
                 </div>
-                <div className="relative">
-                    {/* contact me section */}
+
+                {/* contact me section */}
+                <div id="contact" className="relative">
                     <ContactSection />
                 </div>
+                
+                {/* footer  */}
                 <div className="relative">
-                    {/* footer  */}
                     <FooterSection />
                 </div>
-                <div className="relative"></div>
+                
             </div>
         </div>
     );
