@@ -6,8 +6,16 @@ import ProjectSection from "./components/Projects/ProjectSection.jsx";
 import ContactSection from "./components/ContactUs/ContactSection.jsx";
 import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
-
+import React from "react";
+import AOS from "aos";
+import Aos from "aos";
 function App() {
+
+    React.useEffect(() => {
+        AOS.init();
+        Aos.refresh();
+    }, [])
+
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -31,7 +39,7 @@ function App() {
                 </div>
 
                 {/* about section  */}
-                <div id="about" className="relative">
+                <div data-aos="fade-up" id="about" className="relative">
                     <AboutSection className=" relative" />
                 </div>
 
@@ -49,14 +57,12 @@ function App() {
                 <div id="contact" className="relative">
                     <ContactSection />
                 </div>
-                
+
                 {/* footer  */}
-                
-                
             </div>
             <div className="relative">
-                    <FooterSection />
-                </div>
+                <FooterSection />
+            </div>
         </div>
     );
 }
