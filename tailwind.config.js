@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'xs': '475px',
+        '3xl': '1920px',
+      
+      },
       colors: {
         'text_secondary': "#5D5E60",
       },
