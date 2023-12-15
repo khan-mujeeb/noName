@@ -23,14 +23,14 @@ const SkillsSection = () => {
 
             {/* front-end  */}
             <div className="flex items-center justify-center md:max-3xl:flex-row lg:max-3xl:gap-36 flex-col-reverse gap-10">
-                <img className="lg:max-3xl:w-[500px] w-80" src={webDev} alt="" />
+                <img className="lg:max-3xl:w-[500px] w-72" src={webDev} alt="" />
 
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
-                    <h2 className="text-3xl font-semibold">
+                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold">
                         Front End Developmet
                     </h2>
                     {/* tech stack */}
-                    <div className="flex gap-4 justify-center flex-wrap md:max-3xl:[500px] w-96">
+                    <div className="flex gap-4 justify-center flex-wrap md:max-3xl:[500px] w-80">
                         <TechStack title="HTML5" icon={html} />
                         <TechStack title="CSS3" icon={css} />
                         <TechStack title="JavaScript" icon={js} />
@@ -54,11 +54,11 @@ const SkillsSection = () => {
             {/* android dev  */}
             <div className="flex items-center justify-center md:max-3xl:flex-row lg:max-3xl:gap-36 flex-col gap-10 ">
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
-                    <h2 className="text-3xl font-semibold">
+                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold">
                         Android Developmet
                     </h2>
                     {/* tech stack */}
-                    <div className="flex justify-between flex-wrap md:max-3xl:[500px] w-96">
+                    <div className="flex gap-4 justify-center flex-wrap md:max-3xl:[500px] w-80">
                         <TechStack title="Android" icon={android} />
                         <TechStack title="Android Studio" icon={androidStudio} />
                         <TechStack title="Kotlin" icon={kotlin} />

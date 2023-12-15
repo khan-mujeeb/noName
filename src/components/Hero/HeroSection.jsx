@@ -24,7 +24,7 @@ const HeroSection = () => {
             />
 
             {/* info  */}
-            <div className="flex flex-col items-center justify-center lg:max-3xl:gap-6 lg:max-3xl:w-96 gap-3 w-80">
+            <div className="flex flex-col items-center justify-center lg:max-3xl:gap-6 lg:max-3xl:w-96 gap-2 w-80">
                 <img className="lg:max-3xl:h-10 lg:max-3xl:w-10 w-8 h-8" src={hi} alt="" />
 
                 {/* hello message  */}

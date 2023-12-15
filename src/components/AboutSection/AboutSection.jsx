@@ -19,7 +19,7 @@ const AboutSection = () => {
                     <img src={dp} alt="" />
                 </div>
 
-                <div className="lg:max-3xl:w-[600px] w-96 backdrop-blur-sm p-4 rounded-xl">
+                <div className="lg:max-3xl:w-[600px] w-80 backdrop-blur-sm p-4 rounded-xl">
                     <Tabs>
                         <TabList className="flex gap-4">
                             <Tab >Personal Info</Tab>

@@ -51,11 +51,12 @@ function App() {
                 </div>
                 
                 {/* footer  */}
-                <div className="relative">
-                    <FooterSection />
-                </div>
+                
                 
             </div>
+            <div className="relative">
+                    <FooterSection />
+                </div>
         </div>
     );
 }
