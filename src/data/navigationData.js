@@ -19,6 +19,11 @@ let navList = [
 
     },
     {
+        name: 'Blogs',
+        id: "blog"
+
+    },
+    {
         name: 'Contact',
         id: "contact"
 

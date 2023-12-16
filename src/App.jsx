@@ -6,6 +6,7 @@ import ProjectSection from "./components/Projects/ProjectSection.jsx";
 import ContactSection from "./components/ContactUs/ContactSection.jsx";
 import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
+import BlogSection from "./components/Blog/BlogSection.jsx";
 import React from "react";
 import AOS from "aos";
 import Aos from "aos";
@@ -51,6 +52,9 @@ function App() {
                 {/* project section */}
                 <div id="project" className="relative">
                     <ProjectSection />
+                </div>
+                <div id="blog" className="relative">
+                    <BlogSection />
                 </div>
 
                 {/* contact me section */}
