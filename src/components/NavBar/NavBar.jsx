@@ -3,6 +3,8 @@ import mk_logo from "../../assets/img/mk_logo.png";
 import navList from "../../data/navigationData";
 export default function NavBar({ handleNavigation }) {
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
+
 
     return (
         <div className="select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:justify-around justify-between">
@@ -38,13 +40,16 @@ export default function NavBar({ handleNavigation }) {
                         </div>
 
                         {/* mobile  */}
-                        <ul className="flex flex-col items-center justify-between min-h-[250px]">
+                        <ul className="flex flex-col items-center justify-between min-h-[250px] overflow-hidden">
                             {navList.map((item) => (
                                 <li
                                     key={item.id}
-                                    className="border-b border-gray-400 my-8 uppercase text-xl"
+                                    className={`text-xl hover:font-semibold transition-all duration-200 ${
+                                selectedItem === item.id ? "font-semibold" : "" // Apply bold style if selected
+                            }`}
                                     onClick={() => {
                                         handleNavigation(item.id)
+                                        setSelectedItem(item.id)
                                         setIsNavOpen((prev) => !prev)
                                     }}
                                 >
@@ -62,12 +67,17 @@ export default function NavBar({ handleNavigation }) {
                     {navList.map((item) => (
                         <li
                             key={item.id}
-                            className="text-xl hover:font-semibold transition-all duration-200"
+                            className={`flex text-xl hover:font-semibold transition-all duration-200 ${
+                                selectedItem === item.id ? "font-semibold text-violet-950" : "" 
+                            }`}
                             href="/about"
-                            onClick={() => handleNavigation(item.id)}
+                            onClick={() => {handleNavigation(item.id)
+                                setSelectedItem(item.id)}
+                            }
                         >
                             {item.name}
                         </li>
+                        
                     ))}
                 </ul>
             </nav>
