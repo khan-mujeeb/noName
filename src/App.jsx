@@ -8,14 +8,14 @@ import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 import BlogSection from "./components/Blog/BlogSection.jsx";
 import React from "react";
-import AOS from "aos";
-import Aos from "aos";
+// import AOS from "aos";
+// import Aos from "aos";
 function App() {
 
-    React.useEffect(() => {
-        AOS.init();
-        Aos.refresh();
-    }, [])
+    // React.useEffect(() => {
+    //     AOS.init();
+    //     Aos.refresh();
+    // }, [])
 
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -40,7 +40,7 @@ function App() {
                 </div>
 
                 {/* about section  */}
-                <div data-aos="fade-up" id="about" className="relative">
+                <div id="about" className="relative">
                     <AboutSection className=" relative" />
                 </div>
 

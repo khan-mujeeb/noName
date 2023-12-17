@@ -43,7 +43,7 @@ const ContactSection = () => {
                     <h1 className="lg:max-2xl:text-3xl font-semibold text-2xl">
                         {"Let's Work Together"}
                     </h1>
-                    <p className="text-gray-700">{contactInfo.connectMessage}</p>
+                    <p className="text-gray-700 lg:max-2xl:w-96 w-80">{contactInfo.connectMessage}</p>
                 </div>
                 <img
                     className="md:max-2xl:w-96 lg:max-2xl:inline-block hidden"

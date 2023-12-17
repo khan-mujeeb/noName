@@ -20,12 +20,10 @@ const BlogSection = () => {
                 {
                     blogData.slice(0, displayCount).map((blog) => { // Display based on displayCount
                         return (
-                            <div key={blog.id} className=" z-20 w-80 hover:bg-slate-300 rounded-lg shadow-lg backdrop-blur-sm flex flex-col items-center justify-center">
+                            <div key={blog.id} className="p-4 z-20 w-80 hover:bg-slate-300 rounded-lg shadow-lg backdrop-blur-sm flex flex-col gap-2 items-center justify-center">
                                 <img src={blog.img} alt={blog.title} className=" w-72 h-48 object-cover rounded-t-lg" />
-                                <div className="p-4">
                                     <h3 className="text-xl font-semibold">{blog.title}</h3>
-                                    {/* Additional content for the blog post */}
-                                </div>
+                                
                             </div>
                         );
                     })
