@@ -1,9 +1,10 @@
 import { useState } from "react";
 import mk_logo from "../../assets/img/mk_logo.png";
-import { IoSunny } from "react-icons/io5";
-import { IoMoon } from "react-icons/io5";
-import { IconContext } from "react-icons";
+import DarkModeBtn from "./DarkModeBtn";
 import navList from "../../data/navigationData";
+import "./NavBar.css";
+import NavItem from "./NavItem";
+
 export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
@@ -22,9 +23,9 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
                         className="HAMBURGER-ICON space-y-2"
                         onClick={() => setIsNavOpen((prev) => !prev)}
                     >
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
                     </div>
 
                     <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -33,7 +34,7 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
                             onClick={() => setIsNavOpen(false)}
                         >
                             <svg
-                                className="h-8 w-8 text-gray-600"
+                                className="h-8 w-8 text-gray-600 dark:text-gray-100"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -47,34 +48,21 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
                         </div>
 
                         {/* mobile  */}
-                        <ul className="flex flex-col items-center justify-between min-h-[250px] overflow-hidden">
+                        <ul className="flex flex-col items-center justify-between h-full w-full py-36 overflow-hidden dark:bg-darkNavbar">
                             {navList.map((item) => (
-                                <li
+                                <NavItem
                                     key={item.id}
-                                    className={`text-xl hover:font-semibold transition-all duration-200 ${
-                                        selectedItem === item.id
-                                            ? "font-semibold"
-                                            : "" // Apply bold style if selected
-                                    }`}
-                                    onClick={() => {
-                                        handleNavigation(item.id);
-                                        setSelectedItem(item.id);
-                                        setIsNavOpen((prev) => !prev);
-                                    }}
-                                >
-                                    {item.name}
-                                </li>
+                                    item={item}
+                                    selectedItem={selectedItem}
+                                    handleNavigation={handleNavigation}
+                                    setSelectedItem={setSelectedItem}
+                                    setIsNavOpen={setIsNavOpen}
+                                />
                             ))}
-                            <button
-                                className="z-50"
-                                onClick={() => handleDarkMode()}
-                            >
-                                {darkMode ? (
-                                    <IoSunny className="ico" />
-                                ) : (
-                                    <IoMoon className="text-2xl" />
-                                )}
-                            </button>
+                            <DarkModeBtn
+                                darkMode={darkMode}
+                                handleDarkMode={handleDarkMode}
+                            />
                         </ul>
                     </div>
                 </section>
@@ -83,59 +71,20 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
 
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
                     {navList.map((item) => (
-                        <li
+                        <NavItem
                             key={item.id}
-                            className={`flex text-xl hover:font-semibold dark:text-gray-100 transition-all duration-500 ${
-                                selectedItem === item.id
-                                    ? "font-semibold text-violet-950"
-                                    : ""
-                            }`}
-                            href="/about"
-                            onClick={() => {
-                                handleNavigation(item.id);
-                                setSelectedItem(item.id);
-                            }}
-                        >
-                            {item.name}
-                        </li>
+                            item={item}
+                            selectedItem={selectedItem}
+                            handleNavigation={handleNavigation}
+                            setSelectedItem={setSelectedItem}
+                        />
                     ))}
-                    <button className="z-50" onClick={() => handleDarkMode()}>
-                        {darkMode ? (
-                            <IconContext.Provider
-                                value={{
-                                    color: "white",
-                                    className: "global-class-name",
-                                }}
-                            >
-                                <div>
-                                    <IoSunny className="text-2xl" />
-                                </div>
-                            </IconContext.Provider>
-                        ) : (
-                            <IoMoon className="text-2xl" />
-                        )}
-                    </button>
+                    <DarkModeBtn
+                        darkMode={darkMode}
+                        handleDarkMode={handleDarkMode}
+                    />
                 </ul>
             </nav>
-            <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
         </div>
     );
 }

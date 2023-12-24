@@ -2,12 +2,13 @@ import React from "react";
 import { LuGithub } from "react-icons/lu";
 import { FaGooglePlay } from "react-icons/fa";
 import ProjectShareable from "./ProjectShareable.jsx";
+import TailwindCustomStyle from "../utlis/style/TailwindCustomStyle";
 
 const ProjectListItem = ({ project }) => {
     return (
         <div
             key={project.id}
-            className="sm:max-3xl:w-[550px]  md:max-3xl:p-10 p-3 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm dark:bg-gradient-to-r from-gray-800 from-10% via-darkNavbar via-30% to-gray-900 to-90%"
+            className={`sm:max-3xl:w-[550px]  md:max-3xl:p-10 p-3 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm ${TailwindCustomStyle.darkGradiantBg}`} 
         >
             <div className="flex flex-col gap-4 items-center">
                 <div className="flex justify-between items-center w-full">
