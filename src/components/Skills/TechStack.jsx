@@ -2,7 +2,7 @@ import React from "react";
 
 const TechStack = ({title, icon}) => {
     return (
-        <div className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl rounded-full h-14 w-14 sm:h-16 sm:w-16 grid place-items-center group">
+        <div className="text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl rounded-full h-14 w-14 sm:h-16 sm:w-16 grid place-items-center group dark:bg-gradient-to-r from-gray-800 from-10% via-darkNavbar via-30% to-gray-900 to-90%">
             <span>
                 <img className="h-10 w-10" src={icon} alt="" />
             </span>

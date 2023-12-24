@@ -7,23 +7,18 @@ import { FaBook } from "react-icons/fa";
 import { IoIosSchool } from "react-icons/io";
 import { MdDateRange } from "react-icons/md";
 
-
 const EducationSection = () => {
     return (
-        <VerticalTimeline lineColor="black"
-        >
+        <VerticalTimeline lineColor="black">
             <VerticalTimelineElement
-                className="vertical-timeline-element--work"
+                className="vertical-timeline-element--work "
                 contentStyle={{
-                    // background: "rgb(33, 150, 243)",
                     height: "auto",
                     width: "auto",
                     color: "#000",
-                    
-
                 }}
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                     <div className="flex gap-2 items-center">
                         <FaBook />
                         <h3 className="vertical-timeline-element-title text-sm">
@@ -50,7 +45,7 @@ const EducationSection = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{
                     // background: "rgb(33, 150, 243)",
-                    
+
                     height: "auto",
                     width: "auto",
                     color: "#000",
@@ -60,14 +55,14 @@ const EducationSection = () => {
                     <div className="flex gap-2 items-center">
                         <FaBook />
                         <h3 className="vertical-timeline-element-title text-sm">
-                        12th(PCM), HSC
+                            12th(PCM), HSC
                         </h3>
                     </div>
 
                     <div className="flex text-sm gap-3 items-center">
                         <IoIosSchool />
                         <h4 className="vertical-timeline-element-subtitle text-sm">
-                        Kendriya Vidyalaya No. 2, OFDR, Pune
+                            Kendriya Vidyalaya No. 2, OFDR, Pune
                         </h4>
                     </div>
 
@@ -79,8 +74,6 @@ const EducationSection = () => {
                     </div>
                 </div>
             </VerticalTimelineElement>
-            
-
         </VerticalTimeline>
     );
 };

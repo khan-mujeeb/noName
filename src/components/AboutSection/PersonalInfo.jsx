@@ -9,7 +9,7 @@ import contactInfo from "../../data/contactInfo.js";
 const PersonalInfo = () => {
     return <div className="flex flex-col w-full gap-10">
     {/* description  */}
-    <div className=" text-gray-700">
+    <div className=" text-gray-700 dark:text-gray-400">
         {contactInfo.introduction}
     </div>
 

@@ -26,7 +26,7 @@ const SkillsSection = () => {
                 <img className="lg:max-3xl:w-[500px] w-72" src={webDev} alt="" />
 
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
-                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold">
+                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold dark:text-gray-200">
                         Front End Developmet
                     </h2>
                     {/* tech stack */}
@@ -43,7 +43,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* description  */}
-                    <ul className="md:max-3xl:self-start">
+                    <ul className="md:max-3xl:self-start dark:text-gray-300">
                         <li className=" list-disc">Responsive Web Design</li>
                         <li className=" list-disc">Single Page Application</li>
                         <li className=" list-disc">Progressive Web Application</li>
@@ -54,7 +54,7 @@ const SkillsSection = () => {
             {/* android dev  */}
             <div className="flex items-center justify-center md:max-3xl:flex-row lg:max-3xl:gap-36 flex-col gap-10 ">
                 <div className="flex flex-col items-center gap-10 backdrop-blur-sm p-4">
-                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold">
+                    <h2 className="lg:max-3xl:text-3xl text-2xl font-semibold dark:text-gray-200">
                         Android Developmet
                     </h2>
                     {/* tech stack */}
@@ -69,7 +69,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* description  */}
-                    <ul className="md:max-3xl:self-start">
+                    <ul className="md:max-3xl:self-start dark:text-gray-300">
                         <li className=" list-disc">Native Android App</li>
                         <li className=" list-disc">Android App with Firebase</li>
                         <li className=" list-disc">Android App with Rest API</li>
