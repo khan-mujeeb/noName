@@ -28,9 +28,9 @@ const PersonalInfo = () => {
     </div>
     {/* languages  */}
     <div className="flex flex-col gap-1">
-        <h2 className=" font-semibold">Language Skills</h2>
+        <h2 className=" font-semibold  dark:text-gray-200">Language Skills</h2>
         <div className="w-full h-[0.1px]  bg-gray-300"></div>
-        <p className="text-gray-700">English, Hindi, Marathi</p>
+        <p className="text-gray-700 dark:text-gray-300">English, Hindi, Marathi</p>
     </div>
 </div>
 };

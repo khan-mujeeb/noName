@@ -1,3 +1,4 @@
+import React from "react";
 import HeroSection from "./components/Hero/HeroSection.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import AboutSection from "./components/AboutSection/AboutSection.jsx";
@@ -7,15 +8,11 @@ import ContactSection from "./components/ContactUs/ContactSection.jsx";
 import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 import BlogSection from "./components/Blog/BlogSection.jsx";
-import React from "react";
-// import AOS from "aos";
-// import Aos from "aos";
-function App() {
+import { motion } from "framer-motion";
 
-    // React.useEffect(() => {
-    //     AOS.init();
-    //     Aos.refresh();
-    // }, [])
+function App() {
+    const [darkMode, setDarkMode] = React.useState(false);
+
 
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -27,11 +24,16 @@ function App() {
     return (
         <div className=" w-screen h-screen overflow-x-hidden">
             {/* nav bar */}
-            <NavBar handleNavigation={handleNavigation} />
+            <NavBar handleNavigation={handleNavigation} darkMode={darkMode} setDarkMode={setDarkMode}/>
 
             <div className=" min-h-screen flex flex-col p-1">
                 <div className=" absolute">
-                    <ParticleBg />
+                    {
+                        <ParticleBg
+                            bgColor={darkMode ? "#131B23" : "#ffffff"}
+                            particleColor={darkMode ? "#ffffff" : "#131B23"}
+                        />
+                    }
                 </div>
 
                 {/* hero section  */}
@@ -40,9 +42,24 @@ function App() {
                 </div>
 
                 {/* about section  */}
-                <div id="about" className="relative">
+                <motion.div
+                    initial={{ y: -200, opacity: 0 }}
+                    whileInView={{
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                            type: "smooth",
+
+                            duration: 1.5,
+                        },
+                    }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true, amount: 0.8 }}
+                    id="about"
+                    className="relative"
+                >
                     <AboutSection className=" relative" />
-                </div>
+                </motion.div>
 
                 {/* skills section  */}
                 <div id="skills" className="relative">

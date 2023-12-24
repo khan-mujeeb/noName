@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       screens:{
@@ -13,6 +14,7 @@ export default {
       },
       colors: {
         'text_secondary': "#5D5E60",
+        'darkNavbar': '#181D25'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

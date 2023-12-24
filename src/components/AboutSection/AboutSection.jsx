@@ -23,7 +23,7 @@ const AboutSection = () => {
                     <Tabs>
                         <TabList className="flex gap-4">
                             <Tab >Personal Info</Tab>
-                            <Tab>Education</Tab>
+                            <Tab >Education</Tab>
                         </TabList>
 
                         {/* personal info */}

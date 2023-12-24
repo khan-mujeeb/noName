@@ -10,6 +10,7 @@ import resume from "../../assets/resume.pdf";
 import SocialAccountHoverLine from "./SocialAccountHoverLine.jsx";
 import { motion } from "framer-motion";
 
+
 const HeroSection = () => {
     return (
         <div
@@ -25,6 +26,8 @@ const HeroSection = () => {
                     alt=""
                 />
 
+               
+
                 {/* info  */}
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
@@ -39,19 +42,19 @@ const HeroSection = () => {
                     />
 
                     {/* hello message  */}
-                    <div className="flex items-center gap-2 font-semibold text-text_secondary">
+                    <div className="flex items-center gap-2 font-semibold text-text_secondary dark:text-gray-500">
                         <h4 className=" lg:max-3xl:text-xl text-md">
                             {"Hello, I'm"}
                         </h4>
                     </div>
 
                     {/* name  */}
-                    <h1 className=" font-semibold lg:max-3xl:text-[3rem] text-2xl">
+                    <h1 className=" dark:text-gray-50 font-semibold lg:max-3xl:text-[3rem] text-2xl">
                         Mujeeb Khan
                     </h1>
 
                     {/* job title  */}
-                    <div className="hero-section-left-subheading flex gap-2 lg:max-3xl:text-3xl text-xl lg:max-3xl:w-96 w-72 font-semibold text-text_secondary">
+                    <div className="hero-section-left-subheading flex gap-2 lg:max-3xl:text-3xl text-xl lg:max-3xl:w-96 w-72 font-semibold text-text_secondary dark:text-gray-300">
                         <div className=" inline">I am </div>
                         <Typed
                             strings={[
@@ -64,7 +67,7 @@ const HeroSection = () => {
                             backSpeed={80}
                             backDelay={1000}
                             loop
-                            className="role text-blue-950"
+                            className="role text-blue-950 dark:text-yellow-500"
                         />
                     </div>
 

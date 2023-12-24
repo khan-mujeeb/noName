@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-const ParticleBg = () => {
+const ParticleBg = ({bgColor, particleColor}) => {
     const particlesInit = useCallback(async (engine) => {
         console.log(engine);
 
@@ -13,9 +13,9 @@ const ParticleBg = () => {
     const particlesLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
-    // #131B23
+    // 
     return (
-        <div className="max-h-screen">
+        <div className="max-h-screen transition-all duration-500">
             <Particles
                 id="tsparticles"
                 init={particlesInit}
@@ -24,7 +24,7 @@ const ParticleBg = () => {
                     background: {
                         size: "cover",
                         color: {
-                            value: "#ffffff",
+                            value: bgColor,
                         },
                     },
                     fpsLimit: 120,
@@ -52,10 +52,10 @@ const ParticleBg = () => {
                     },
                     particles: {
                         color: {
-                            value: "#170312",
+                            value: particleColor,
                         },
                         links: {
-                            color: "#170312",
+                            color: particleColor,
                             distance: 150,
                             enable: true,
                             opacity: 0.5,
