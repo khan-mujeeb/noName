@@ -9,6 +9,7 @@ import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 import BlogSection from "./components/Blog/BlogSection.jsx";
 import { motion } from "framer-motion";
+import PublicWork from "./components/PublicWork/PublicWork.jsx";
 
 function App() {
     const [darkMode, setDarkMode] = React.useState(false);
@@ -43,14 +44,14 @@ function App() {
 
                 {/* about section  */}
                 <motion.div
-                    initial={{ y: -200, opacity: 0 }}
+                    initial={{ y: 200, opacity: 0 }}
                     whileInView={{
                         y: 0,
                         opacity: 1,
                         transition: {
                             type: "smooth",
 
-                            duration: 1.5,
+                            duration: 1,
                         },
                     }}
                     transition={{ duration: 1 }}
@@ -64,6 +65,10 @@ function App() {
                 {/* skills section  */}
                 <div id="skills" className="relative">
                     <SKillsSection />
+                </div>
+
+                <div id="wip" className=" relative">
+                    <PublicWork />
                 </div>
 
                 {/* project section */}

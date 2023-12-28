@@ -14,6 +14,10 @@ let navList = [
         id: "skills"
     },
     {
+        name: 'Work in Public Corner',
+        id: "wip"
+    },
+    {
         name: 'Projects',
         id: "project"
 

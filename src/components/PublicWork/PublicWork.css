@@ -1,0 +1,47 @@
+.circle-1,
+.circle-2,
+.circle-3 {
+    color: #fff;
+    padding: 5%;
+    width: 320px;
+    height: 340px;
+    margin: 0 -15px;
+    mix-blend-mode: multiply;
+}
+.circle-1 {
+    background: #f66;
+    border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+.circle-2 {
+    background: #f92;
+    border-radius: 80% 30% 50% 50%/50%;
+}
+.circle-3 {
+    background: #fc2;
+    border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+}
+
+.note {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    text-align: justify;
+    overflow: hidden;
+    color: #272727;
+    background: #ffc600;
+    background: linear-gradient(225deg, transparent 42px, #ffc600 42px);
+    border-radius: 10px;
+}
+.note:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border: 30px solid transparent;
+    border-bottom-left-radius: 10px;
+    border-left: 30px solid #ffc600;
+    border-bottom: 30px solid #ffc600;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), -1px 1px 4px rgba(0, 0, 0, 0.4);
+}

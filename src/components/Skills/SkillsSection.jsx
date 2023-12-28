@@ -10,8 +10,9 @@ import sql from "../../assets/img/stack/sql.png";
 import git from "../../assets/img/stack/git.png";
 import vscode from "../../assets/img/stack/vscode.png";
 import postman from "../../assets/img/stack/postman.png";
-import androidDev from "../../assets/img/androidDev2.gif";
 import android from "../../assets/img/stack/android.png";
+import androidDev from "../../assets/img/androidDev2.gif";
+import androidDevSvg from "../../assets/img/androidDev.svg";
 import androidStudio from "../../assets/img/stack/android_studio.png";
 import kotlin from "../../assets/img/stack/kotlin.png";
 import java from "../../assets/img/stack/java.png";
@@ -77,7 +78,8 @@ const SkillsSection = () => {
                     </ul>
                 </div>
 
-                <img className="lg:max-3xl:w-[500px] w-80" src={androidDev} alt="" />
+                <img className="lg:max-3xl:w-[500px] w-80 dark:hidden visible" src={androidDev} alt="" />
+                <img className="lg:max-3xl:w-[500px] w-80 dark:visible hidden" src={androidDevSvg} alt="" />
             </div>
         </div>
     );
