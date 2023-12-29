@@ -20,11 +20,11 @@ const BlogSection = () => {
                 {
                     blogData.slice(0, displayCount).map((blog) => { // Display based on displayCount
                         return (
-                            <div key={blog.id} className={`p-4 z-20 w-80 hover:bg-slate-300 rounded-lg shadow-lg backdrop-blur-sm flex flex-col gap-2 items-center justify-center ${TailwindCustomStyle.darkGradiantBg}`}>
+                            <a href={blog.url} target="_blank" rel="noreferrer" key={blog.id} className={`p-4 z-20 w-80 hover:bg-slate-300 rounded-lg shadow-lg backdrop-blur-sm flex flex-col gap-2 items-center justify-center ${TailwindCustomStyle.darkGradiantBg}`}>
                                 <img src={blog.img} alt={blog.title} className=" w-72 h-48 object-cover rounded-t-lg" />
                                     <h3 className="text-xl font-semibold dark:text-gray-200">{blog.title}</h3>
                                 
-                            </div>
+                            </a>
                         );
                     })
                 }
