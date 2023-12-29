@@ -67,9 +67,9 @@ function App() {
                     <SKillsSection />
                 </div>
 
-                <div id="wip" className=" relative">
+                {/* <div id="wip" className=" relative">
                     <PublicWork />
-                </div>
+                </div> */}
 
                 {/* project section */}
                 <div id="project" className="relative">
