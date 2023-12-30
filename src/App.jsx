@@ -14,7 +14,6 @@ import PublicWork from "./components/PublicWork/PublicWork.jsx";
 function App() {
     const [darkMode, setDarkMode] = React.useState(false);
 
-
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -25,7 +24,11 @@ function App() {
     return (
         <div className=" w-screen h-screen overflow-x-hidden">
             {/* nav bar */}
-            <NavBar handleNavigation={handleNavigation} darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <NavBar
+                handleNavigation={handleNavigation}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+            />
 
             <div className=" min-h-screen flex flex-col p-1">
                 <div className=" absolute">
@@ -43,7 +46,7 @@ function App() {
                 </div>
 
                 {/* about section  */}
-                <motion.div
+                {/* <motion.div
                     initial={{ y: 200, opacity: 0 }}
                     whileInView={{
                         y: 0,
@@ -60,8 +63,11 @@ function App() {
                     className="relative"
                 >
                     <AboutSection className=" relative" />
-                </motion.div>
+                </motion.div> */}
 
+                <div id="about" className=" relative">
+                    <AboutSection  />
+                </div>
                 {/* skills section  */}
                 <div id="skills" className="relative">
                     <SKillsSection />
