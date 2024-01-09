@@ -9,7 +9,7 @@ import socialLinks from "../../data/socialProfile";
 import resume from "../../assets/resume.pdf";
 import SocialAccountHoverLine from "./SocialAccountHoverLine.jsx";
 import { motion } from "framer-motion";
-
+import ContactInfo from "./ContactInfo.jsx";
 
 const HeroSection = () => {
     return (
@@ -80,9 +80,7 @@ const HeroSection = () => {
                         >
                             Download CV
                         </a>
-                        <button className="rounded-3xl bg-black p-3 lg:max-3xl:p-3 text-sm text-white font-semibold">
-                            Contact Info
-                        </button>
+                        <ContactInfo />
                     </div>
 
                     {/* social profile  */}
