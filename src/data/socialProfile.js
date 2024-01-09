@@ -10,6 +10,8 @@ const socialLinks = {
     Twitter: "https://twitter.com/mujeebk51620752",
     MicrosoftEdgeStore:
         "https://microsoftedge.microsoft.com/addons/search?hl=en-US&developer=Khan.dev",
+    youtube: "https://www.youtube.com/@mujeebkhan4919/shorts",
+    
 };
 
 export default socialLinks;

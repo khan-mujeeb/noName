@@ -4,18 +4,43 @@ import DarkModeBtn from "./DarkModeBtn";
 import navList from "../../data/navigationData";
 import "./NavBar.css";
 import NavItem from "./NavItem";
+import { useEffect } from "react";
 
 export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
+    const [lastScrollY, setLastScrollY] = useState(0);
     const [isNavOpen, setIsNavOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
-
+    
     const handleDarkMode = () => {
         setDarkMode(!darkMode);
         document.body.classList.toggle("dark");
     };
+    
+    const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
+    const [navBarStyle, setNavBarStyle] = useState(""); // State to track selected item
+    const handleScrollX = () => {
+        console.log("scrolling");
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > 200) {
+            if (currentScrollY > lastScrollY) {
+                setNavBarStyle("hidden");
+            } else {
+                setNavBarStyle("visible");
+            }
+        } else {
+            setNavBarStyle("visible");
+        }
+        setLastScrollY(currentScrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScrollX);
+        return () => window.removeEventListener("scroll", handleScrollX);
+    }, [lastScrollY]);
 
     return (
-        <div className="dark:bg-darkNavbar dark:bg-transparent transition-all duration-700 select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:px-24 justify-between">
+        <div
+            className={`dark:bg-darkNavbar dark:bg-transparent transition-all duration-700 select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:px-24 justify-between ${navBarStyle}`}
+        >
             <img className="w-36" src={mk_logo} alt="" />
             <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
@@ -69,7 +94,9 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
 
                 {/* desktop  */}
 
-                <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+                <ul
+                    className={`DESKTOP-MENU hidden space-x-8 lg:flex ${navBarStyle}`}
+                >
                     {navList.map((item) => (
                         <NavItem
                             key={item.id}
