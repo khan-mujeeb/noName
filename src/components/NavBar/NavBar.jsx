@@ -35,7 +35,7 @@ export default function NavBar({ handleNavigation}) {
 
     return (
         <div
-            className={`dark:bg-darkNavbar dark:bg-transparent transition-all duration-700 select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:px-24 justify-between ${navBarStyle}`}
+            className={`dark:bg-darkNavbar dark:bg-transparent transition-all duration-300 select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:px-24 justify-between  ${navBarStyle}`}
         >
             <img className="w-36" src={mk_logo} alt="" />
             <nav>

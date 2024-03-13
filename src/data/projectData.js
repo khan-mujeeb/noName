@@ -79,7 +79,7 @@ let projects = [
             "Muvii Deakho is a film database powered by the TMBD API. Users can explore recently released movies and TV series, access their details and ratings, discover popular and top-rated films, and receive recommendations for similar movies.",
         github: "https://github.com/khan-mujeeb/Muvii-Deakho",
         youtube:
-            "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
+            "https://www.youtube.com/embed/Qkn52t2I1S4?si=6lFu6FLSPbAVaJE7",
         skills: [
             "Javascript",
             "React.js",
@@ -100,7 +100,7 @@ let projects = [
             "Palettepro allows users to dynamically generate color palettes from images or explore prebuilt palettes",
         github: "https://github.com/khan-mujeeb/Color-Palette",
         youtube:
-            "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
+            "https://www.youtube.com/embed/4W-0oCrlJiU?si=9_dzBQPQ4KSXAzog",
         skills: [
             "Javascript",
             "React.js",
@@ -122,7 +122,7 @@ let projects = [
         youtube:
             "https://www.youtube.com/embed/a6vwh2yKT3I?si=l2W9fjwUpKasIEJq",
         skills: ["React js", "JavaScript", "HTML", "CSS", "Eden AI"],
-        executable: "",
+        executable: "#",
         type: "web",
     },
 
