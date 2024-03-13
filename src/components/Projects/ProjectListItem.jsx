@@ -3,12 +3,12 @@ import { LuGithub } from "react-icons/lu";
 import { FaGooglePlay } from "react-icons/fa";
 import ProjectShareable from "./ProjectShareable.jsx";
 import TailwindCustomStyle from "../utlis/style/TailwindCustomStyle";
-
+import { MdOpenInNew } from "react-icons/md";
 const ProjectListItem = ({ project }) => {
     return (
         <div
             key={project.id}
-            className={`sm:max-3xl:w-[550px]  md:max-3xl:p-10 p-3 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm ${TailwindCustomStyle.darkGradiantBg}`} 
+            className={`sm:max-3xl:w-[550px]  md:max-3xl:p-10 p-3 w-80 rounded-xl shadow-md shadow-gray-900 transition duration-300 hover:bg-stone-100 backdrop-blur-sm ${TailwindCustomStyle.darkGradiantBg}`}
         >
             <div className="flex flex-col gap-4 items-center">
                 <div className="flex justify-between items-center w-full">
@@ -16,11 +16,27 @@ const ProjectListItem = ({ project }) => {
                         {project.name}
                     </h1>
 
-                    <ProjectShareable url={project.github} icon={<LuGithub />} name={"Github"} />
+                    <div className="flex gap-5 justify-center items-center">
+                        <ProjectShareable
+                            url={project.github}
+                            icon={<LuGithub />}
+                            name={"Github"}
+                        />
 
-                    {project.executable.length !== 0 ? (
-                        <ProjectShareable url={project.executable} icon={<FaGooglePlay />} name={"PlayStore"} />
-                    ) : null}
+                        {project.type == "android" ? (
+                            <ProjectShareable
+                                url={project.executable}
+                                icon={<FaGooglePlay />}
+                                name={"PlayStore"}
+                            />
+                        ) : (
+                            <ProjectShareable
+                                url={project.executable}
+                                icon={<MdOpenInNew />}
+                                name={"Live Link"}
+                            />
+                        )}
+                    </div>
                 </div>
 
                 <iframe
@@ -32,7 +48,9 @@ const ProjectListItem = ({ project }) => {
                     allow=""
                     allowFullScreen
                 ></iframe>
-                <p className=" text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+                <p className=" text-sm text-gray-600 dark:text-gray-300">
+                    {project.description}
+                </p>
                 <div className="flex gap-4 flex-wrap">
                     {project.skills.map((tag, tagId) => (
                         <div

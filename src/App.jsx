@@ -26,8 +26,7 @@ function App() {
             {/* nav bar */}
             <NavBar
                 handleNavigation={handleNavigation}
-                darkMode={darkMode}
-                setDarkMode={setDarkMode}
+                
             />
 
             <div className=" min-h-screen flex flex-col p-1">
@@ -45,25 +44,6 @@ function App() {
                     <HeroSection />
                 </div>
 
-                {/* about section  */}
-                {/* <motion.div
-                    initial={{ y: 200, opacity: 0 }}
-                    whileInView={{
-                        y: 0,
-                        opacity: 1,
-                        transition: {
-                            type: "smooth",
-
-                            duration: 1,
-                        },
-                    }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true, amount: 0.8 }}
-                    id="about"
-                    className="relative"
-                >
-                    <AboutSection className=" relative" />
-                </motion.div> */}
 
                 <div id="about" className=" relative">
                     <AboutSection  />

@@ -11,18 +11,7 @@ let projects = [
             "https://play.google.com/store/apps/details?id=com.khandev.qrcodescanner",
         type: "android",
     },
-    {
-        id: 1,
-        name: "Ai Image Generator",
-        description:
-            "Turn words into stunning AI-generated Art and drawings instantly. Enter a prompt- AI art generator brings your ideas to life!",
-        github: "https://github.com/khan-mujeeb/AI-Image-Generator",
-        youtube:
-            "https://www.youtube.com/embed/a6vwh2yKT3I?si=l2W9fjwUpKasIEJq",
-        skills: ["React js", "JavaScript", "HTML", "CSS", "Eden AI"],
-        executable: "",
-        type: "web",
-    },
+    
 
     {
         id: 2,
@@ -82,6 +71,61 @@ let projects = [
         executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
         type: "web",
     },
+    
+    {
+        id: 6,
+        name: "Muvii Deakho",
+        description:
+            "Muvii Deakho is a film database powered by the TMBD API. Users can explore recently released movies and TV series, access their details and ratings, discover popular and top-rated films, and receive recommendations for similar movies.",
+        github: "https://github.com/khan-mujeeb/Muvii-Deakho",
+        youtube:
+            "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
+        skills: [
+            "Javascript",
+            "React.js",
+            "React Router",
+            "Tailwind CSS",
+            "Redux",
+            "Axios"
+        ],
+        executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
+        type: "web",
+    },
+    
+    
+    {
+        id: 7,
+        name: "Pallet Pro",
+        description:
+            "Palettepro allows users to dynamically generate color palettes from images or explore prebuilt palettes",
+        github: "https://github.com/khan-mujeeb/Color-Palette",
+        youtube:
+            "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
+        skills: [
+            "Javascript",
+            "React.js",
+            "React Router",
+            "Tailwind CSS",
+            "Redux",
+            "Color-Theif",
+            "Firebase"
+        ],
+        executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
+        type: "web",
+    },
+    {
+        id: 1,
+        name: "Ai Image Generator",
+        description:
+            "Turn words into stunning AI-generated Art and drawings instantly. Enter a prompt- AI art generator brings your ideas to life!",
+        github: "https://github.com/khan-mujeeb/AI-Image-Generator",
+        youtube:
+            "https://www.youtube.com/embed/a6vwh2yKT3I?si=l2W9fjwUpKasIEJq",
+        skills: ["React js", "JavaScript", "HTML", "CSS", "Eden AI"],
+        executable: "",
+        type: "web",
+    },
+
 
 ];
 export default projects;

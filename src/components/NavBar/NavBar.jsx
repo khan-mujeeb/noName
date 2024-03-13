@@ -1,19 +1,15 @@
 import { useState } from "react";
 import mk_logo from "../../assets/img/mk_logo.png";
-import DarkModeBtn from "./DarkModeBtn";
 import navList from "../../data/navigationData";
 import "./NavBar.css";
 import NavItem from "./NavItem";
 import { useEffect } from "react";
 
-export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
+export default function NavBar({ handleNavigation}) {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isNavOpen, setIsNavOpen] = useState(false);
     
-    const handleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.body.classList.toggle("dark");
-    };
+    
     
     const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
     const [navBarStyle, setNavBarStyle] = useState(""); // State to track selected item
@@ -84,10 +80,7 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
                                     setIsNavOpen={setIsNavOpen}
                                 />
                             ))}
-                            <DarkModeBtn
-                                darkMode={darkMode}
-                                handleDarkMode={handleDarkMode}
-                            />
+                            
                         </ul>
                     </div>
                 </section>
@@ -106,10 +99,7 @@ export default function NavBar({ handleNavigation, darkMode, setDarkMode }) {
                             setSelectedItem={setSelectedItem}
                         />
                     ))}
-                    <DarkModeBtn
-                        darkMode={darkMode}
-                        handleDarkMode={handleDarkMode}
-                    />
+                   
                 </ul>
             </nav>
         </div>

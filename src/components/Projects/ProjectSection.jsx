@@ -20,7 +20,7 @@ const ProjectSection = () => {
         <div
             className="select-none flex flex-col items-center mt-28 "
         >
-            <PageTitle title="Projects" subTitle="Browse My Recent" />
+            <PageTitle title="Hobby Projects" subTitle="Browse My Recent" />
             <div className="flex gap-10 mt-10">
                 <button
                     className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
