@@ -1,9 +1,11 @@
-import React from "react";
 import { LuGithub } from "react-icons/lu";
 import { FaGooglePlay } from "react-icons/fa";
 import ProjectShareable from "./ProjectShareable.jsx";
 import TailwindCustomStyle from "../utlis/style/TailwindCustomStyle";
 import { MdOpenInNew } from "react-icons/md";
+
+
+
 const ProjectListItem = ({ project }) => {
     return (
         <div
@@ -23,19 +25,20 @@ const ProjectListItem = ({ project }) => {
                             name={"Github"}
                         />
 
-                        {project.type == "android" ? (
-                            <ProjectShareable
-                                url={project.executable}
-                                icon={<FaGooglePlay />}
-                                name={"PlayStore"}
-                            />
-                        ) : (
-                            <ProjectShareable
-                                url={project.executable}
-                                icon={<MdOpenInNew />}
-                                name={"Live Link"}
-                            />
-                        )}
+                        {project.executable.length !== 0 &&
+                            (project.type === "android" ? (
+                                <ProjectShareable
+                                    url={project.executable}
+                                    icon={<FaGooglePlay />}
+                                    name={"PlayStore"}
+                                />
+                            ) : (
+                                <ProjectShareable
+                                    url={project.executable}
+                                    icon={<MdOpenInNew />}
+                                    name={"Live Link"}
+                                />
+                            ))}
                     </div>
                 </div>
 

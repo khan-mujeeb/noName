@@ -53,6 +53,22 @@ let projects = [
         type: "android",
     },
     {
+        id: 8,
+        name: "Know Your Planet",
+        description:
+            "Simple Android Application that provides information about the planets in our solar system. It uses the NASA API to fetch the data and display it in a user-friendly manner. ",
+        github: "https://github.com/khan-mujeeb/Know-Your-Planet",
+        youtube:
+            "https://www.youtube.com/embed/RdhXoIS63BI?si=CSHxgth4MEiXrplz",
+        skills: [
+            "Kotlin",
+            "MVVM",
+            "Android Dev",
+        ],
+        executable: "",
+        type: "android",
+    },
+    {
         id: 5,
         name: "Link Wallet",
         description:

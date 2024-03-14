@@ -17,8 +17,8 @@ const PublicWork = () => {
     return (
         <div className="flex flex-col mt-28 items-center justify-center malg:max-3xl:gap-32 gap-24 mb-24">
             <PageTitle
-                title="Real World Work"
-                subTitle="my work that is used by people"
+                title="Featured"
+                subTitle="my published work"
             />
             <div className="flex w-full flex-col gap-10 items-center justify-center">
             <SwitchingTab  onTabChange={onTabChange}/>

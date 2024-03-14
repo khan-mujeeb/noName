@@ -14,7 +14,7 @@ let navList = [
         id: "skills"
     },
     {
-        name: 'wip Corner',
+        name: 'Featured',
         id: "wip"
     },
     {
