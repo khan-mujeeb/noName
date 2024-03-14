@@ -8,7 +8,6 @@ import ContactSection from "./components/ContactUs/ContactSection.jsx";
 import FooterSection from "./components/Footer/FooterSection.jsx";
 import ParticleBg from "./components/ParticleBg.jsx";
 import BlogSection from "./components/Blog/BlogSection.jsx";
-import { motion } from "framer-motion";
 import PublicWork from "./components/PublicWork/PublicWork.jsx";
 
 function App() {
@@ -29,11 +28,13 @@ function App() {
                 
             />
 
+            
+
             <div className=" min-h-screen flex flex-col p-1">
                 <div className=" absolute">
                     {
                         <ParticleBg
-                            bgColor={darkMode ? "#131B23" : "#ffffff"}
+                            bgColor="#fff"
                             particleColor={darkMode ? "#ffffff" : "#131B23"}
                         />
                     }

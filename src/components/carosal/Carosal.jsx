@@ -77,7 +77,7 @@ const Carosal = ({ data }) => {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer" 
-                    className="gap-7 flex justify-center items-center w-[90%] p-10 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl"
+                    className=" gap-7 flex justify-center items-center w-full p-20 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl backdrop-blur-sm"
                     key={project.id}
                 >
                     <img

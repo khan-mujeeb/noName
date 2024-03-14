@@ -88,7 +88,7 @@ let projects = [
             "Redux",
             "Axios"
         ],
-        executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
+        executable: "https://muvii-deakho-q9qu.vercel.app/",
         type: "web",
     },
     
@@ -110,7 +110,7 @@ let projects = [
             "Color-Theif",
             "Firebase"
         ],
-        executable: "https://microsoftedge.microsoft.com/addons/detail/link-wallet/mgcnlecebdnjljkkalpelnhipjnkjfij",
+        executable: "https://color-palette-ashy.vercel.app/",
         type: "web",
     },
     {
