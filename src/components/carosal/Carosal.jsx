@@ -65,7 +65,7 @@ const Carosal = ({ data }) => {
                 </button>
             )
         }
-            className="rounded-xl w-[700px]"
+            className="rounded-xl lg:max-3xl:w-[700px] w-96"
             showThumbs={false}
             autoplay={true}
             slideRef={false}
@@ -77,17 +77,17 @@ const Carosal = ({ data }) => {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer" 
-                    className=" gap-7 flex justify-center items-center w-full p-20 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl backdrop-blur-sm"
+                    className=" gap-7 flex  flex-col justify-center items-center w-full lg:max-3xl:p-20 p-10 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl backdrop-blur-sm"
                     key={project.id}
                 >
                     <img
-                        className=" max-w-[180px] max-h-[180px]  aspect-square w-32"
+                        className="lg:max-3xl:max-w-[180px] lg:max-3xl:max-h-[180px] max-w-[120px] max-h-[120px]  aspect-square lg:max-3xl:w-32"
                         src={project.img}
                         alt={project.name}
                     />
                     <div className=" dark:text-white flex flex-col gap-10 justify-center items-center">
                         <h2 className=" text-3xl font-bold">{project.name}</h2>
-                        <p className="dark:text-gray-300 text-md ">
+                        <p className="dark:text-gray-300 lg:max-3xl:text-md text-sm ">
                             {project.desc}
                         </p>
                     </div>

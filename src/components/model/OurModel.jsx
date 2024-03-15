@@ -9,16 +9,17 @@ function Model(props) {
 
 const OurModel = () => {
     return (
-        <div>
+        <div className=" h-full w-full">
             <Canvas
                 dpr={[1, 1]}
                 shadows={false}
                 camera={{ fov: 45 }}
                 style={{
-                    position: "relative",
-                    top: "7%",
-                    width: "700px",
-                    height: "600px",
+                    
+                    width: "100%",
+                    height: "100%",
+
+            
                 }}
             >
                 <ambientLight intensity={1} />

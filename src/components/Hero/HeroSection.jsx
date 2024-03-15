@@ -15,19 +15,18 @@ const HeroSection = () => {
     return (
         <div
                 id="hero"
-                className="select-none h-full flex justify-center items-center lg:max-3xl:gap-28 mt-10 lg:max-3xl:flex-row flex-col gap-10"
+                className="select-none h-full flex justify-center items-center lg:max-3xl:gap-10 mt-10 lg:max-3xl:flex-row flex-col gap-10"
             >
-                {/* <motion.img
-                    initial={{ opacity: 0, y: -100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.5, staggerChildren: 0.5 }}
+                <div
+                    
                     className="lg:max-3xl:h-[500px]  lg:max-3xl:lg:w-[500px] h-52 w-64"
-                    src={dp}
-                    alt=""
-                /> */}
+                    
+                >
+                    <OurModel />
 
-                <OurModel />
+                </div>
 
+                
 
                 {/* info  */}
                 <div

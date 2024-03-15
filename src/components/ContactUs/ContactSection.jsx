@@ -40,7 +40,7 @@ const ContactSection = () => {
             <PageTitle title="Contact Me" subTitle={"say Hello"} />
             <div className="flex lg:max-2xl:justify-around justify-center items-center">
                 <div className="lg:max-2xl:w-96 flex flex-col gap-4 text-center">
-                    <h1 className="lg:max-2xl:text-3xl font-semibold text-2xl dark:text-gray-100">
+                    <h1 className="lg:max-2xl:text-3xl font-semibold text-2xl dark:text-gray-100 mt-10">
                         {"Let's Work Together"}
                     </h1>
                     <p className="text-gray-700 dark:text-gray-300  lg:max-2xl:w-96 w-80">{contactInfo.connectMessage}</p>
