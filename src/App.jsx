@@ -35,7 +35,9 @@ function App() {
     return (
         <div className="w-screen h-screen overflow-x-hidden">
             {loading ? (
-                <Loader />
+                <div className="h-screen w-screen flex justify-center items-center">
+                    <Loader />
+                </div>
             ) : (
                 <>
                     <NavBar handleNavigation={handleNavigation} />

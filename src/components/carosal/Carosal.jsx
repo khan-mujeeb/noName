@@ -65,7 +65,7 @@ const Carosal = ({ data }) => {
                 </button>
             )
         }
-            className="rounded-xl lg:max-3xl:w-[700px] w-96"
+            className="rounded-xl lg:max-3xl:w-[700px] w-80"
             showThumbs={false}
             autoplay={true}
             slideRef={false}
@@ -77,7 +77,7 @@ const Carosal = ({ data }) => {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer" 
-                    className=" gap-7 flex  flex-col justify-center items-center w-full lg:max-3xl:p-20 p-10 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl backdrop-blur-sm"
+                    className=" gap-7 flex  lg:max-3xl:flex-row flex-col justify-center items-center w-full lg:max-3xl:p-20 p-10 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105  rounded-xl backdrop-blur-sm "
                     key={project.id}
                 >
                     <img

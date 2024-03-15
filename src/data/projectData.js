@@ -73,7 +73,7 @@ let projects = [
         name: "Link Wallet",
         description:
             "A simple Google Chrome extension that is used to store all the important links like coding profles, github, linkedin, blog, personal portfolio etc. So that you can access it whenever your applying for your dream job.",
-        github: "https://github.com/khan-mujeeb/Link-Wallete",
+        github: "https://github.com/khan-mujeeb/Link-Wallet",
         youtube:
             "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
         skills: [
