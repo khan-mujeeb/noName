@@ -13,6 +13,7 @@ const Carosal = ({ data }) => {
         
         autoPlay={true}
         listRef={false}
+        emulateTouch={false}
         itemsRef={false}
         interval={2000}
         labels={{
@@ -67,6 +68,7 @@ const Carosal = ({ data }) => {
         }
             className="rounded-xl lg:max-3xl:w-[700px] w-80"
             showThumbs={false}
+            
             autoplay={true}
             slideRef={false}
             infiniteLoop={true}

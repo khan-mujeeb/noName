@@ -1,10 +1,12 @@
-import EducationSection from "./EducationSection.jsx";
+import TimelineSection from "./TimelineSection.jsx";
 import PersonalInfo from "./PersonalInfo.jsx";
 import PageTitle from "../PageTitle.jsx";
 import dp from "../../assets/img/dp.svg";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./Ab.css"
+import { experienceData } from "../../data/about.js";
+import { educationData } from "../../data/about.js";
 const AboutSection = () => {
     
     return (
@@ -24,6 +26,7 @@ const AboutSection = () => {
                         <TabList className="flex gap-4">
                             <Tab >Personal Info</Tab>
                             <Tab >Education</Tab>
+                            <Tab >Experience</Tab>
                         </TabList>
 
                         {/* personal info */}
@@ -33,7 +36,12 @@ const AboutSection = () => {
 
                         {/* education */}
                         <TabPanel>
-                            <EducationSection />
+                            <TimelineSection data={educationData} type="education" />
+                        </TabPanel>
+
+                        {/* education */}
+                        <TabPanel>
+                            <TimelineSection data={experienceData} type="work" />
                         </TabPanel>
                     </Tabs>
                 </div>

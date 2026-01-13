@@ -4,8 +4,7 @@ import { Modal } from "react-responsive-modal";
 import InfoBlock from "../AboutSection/InfoBlock";
 import { FaUserAlt } from "react-icons/fa";
 import { FaLinkedinIn, FaPhone } from "react-icons/fa6";
-import { MdDateRange, MdMail } from "react-icons/md";
-import { IoIosSchool } from "react-icons/io";
+import {  MdMail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import contactInfo from "../../data/contactInfo.js";
 
