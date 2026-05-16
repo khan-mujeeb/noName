@@ -15,23 +15,23 @@ const OurModel = () => {
                 shadows={false}
                 camera={{ fov: 45 }}
                 style={{
-                    
+
                     width: "100%",
                     height: "100%",
 
-            
+
                 }}
             >
                 <ambientLight intensity={1} />
 
-                
+
                 <PresentationControls
                     speed={1.5}
                     global
                     zoom={0.9}
                     polar={[0.5, 0.7]}
                 >
-                    <Stage  environment={null} shadows={false}>
+                    <Stage environment={null} shadows={false}>
                         <Model scale={0.015} />
                     </Stage>
                 </PresentationControls>

@@ -142,6 +142,18 @@ let projects = [
         type: "web",
     },
 
+    {
+        id: 9,
+        name: "Low Latency Logger",
+        description:
+            "A lightweight and efficient logging library, designed to minimize performance impact while providing robust logging capabilities.",
+        github: "https://github.com/khan-mujeeb/Low-Latency-Logge",
+        youtube: "",
+        skills: ["C++", "Threading"],
+        executable: "#",
+        type: "other",
+    }
+
 
 ];
 export default projects;

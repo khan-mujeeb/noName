@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-const ParticleBg = ({bgColor, particleColor}) => {
+const ParticleBg = ({ bgColor, particleColor }) => {
     const particlesInit = useCallback(async (engine) => {
         console.log(engine);
 

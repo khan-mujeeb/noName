@@ -43,6 +43,17 @@ const ProjectSection = () => {
                 >
                     Android
                 </button>
+
+                <button
+                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
+                    style={{
+                        backgroundColor: type === "other" ? "black" : "white",
+                        color: type === "other" ? "white" : "black",
+                    }}
+                    onClick={() => setType("other")}
+                >
+                    Other
+                </button>
             </div>
 
             <div className="flex justify-center items-center flex-col mt-20">
