@@ -1,52 +1,87 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import mk_logo from "../../assets/img/mk_logo.png";
 import navList from "../../data/navigationData";
 import "./NavBar.css";
 import NavItem from "./NavItem";
-import { useEffect } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-export default function NavBar({ handleNavigation}) {
-    const [lastScrollY, setLastScrollY] = useState(0);
+export default function NavBar({ handleNavigation, isDarkMode, setIsDarkMode}) {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    
-    
-    
-    const [selectedItem, setSelectedItem] = useState("home"); // State to track selected item
-    const [navBarStyle, setNavBarStyle] = useState(""); // State to track selected item
-    const handleScrollX = () => {
-        console.log("scrolling");
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > 200) {
-            if (currentScrollY > lastScrollY) {
-                setNavBarStyle("hidden");
-            } else {
-                setNavBarStyle("visible");
-            }
-        } else {
-            setNavBarStyle("visible");
-        }
-        setLastScrollY(currentScrollY);
-    };
+    const [selectedItem, setSelectedItem] = useState("home");
+    const [navBarStyle, setNavBarStyle] = useState("nav-visible");
 
     useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScrollX = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 200) {
+                setNavBarStyle(
+                    currentScrollY > lastScrollY ? "nav-hidden" : "nav-visible"
+                );
+            } else {
+                setNavBarStyle("nav-visible");
+            }
+
+            lastScrollY = currentScrollY;
+        };
+
         window.addEventListener("scroll", handleScrollX);
         return () => window.removeEventListener("scroll", handleScrollX);
-    }, [lastScrollY]);
+    }, []);
+
+    useEffect(() => {
+        const sections = navList
+            .map((item) => document.getElementById(item.id))
+            .filter(Boolean);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visibleSection = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+                if (visibleSection?.target?.id) {
+                    setSelectedItem(visibleSection.target.id);
+                }
+            },
+            {
+                root: null,
+                rootMargin: "-35% 0px -50% 0px",
+                threshold: [0.1, 0.25, 0.5, 0.75],
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div
-            className={`dark:bg-darkNavbar dark:bg-transparent transition-all duration-300 select-none z-50 flex items-center  border-b border-gray-400 p-8 h-10 fixed w-full backdrop-blur-lg lg:max-3xl:h-28 lg:max-3xl:px-24 justify-between  ${navBarStyle}`}
+            className={`fixed z-50 flex h-20 w-full select-none items-center justify-between border-b border-slate-200/80 bg-white/85 px-6 backdrop-blur-xl transition-all duration-300 dark:border-slate-700/60 dark:bg-slate-950/80 lg:max-3xl:h-24 lg:max-3xl:px-24 ${navBarStyle}`}
         >
-            <img className="w-36" src={mk_logo} alt="" />
-            <nav>
+            <img className="w-32 lg:max-3xl:w-36" src={mk_logo} alt="Mujeeb Khan" />
+            <div className="flex items-center gap-4">
+                <button
+                    type="button"
+                    aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+                    onClick={() => setIsDarkMode((current) => !current)}
+                    className="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-lg text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-950 hover:text-slate-950 dark:border-slate-700 dark:bg-slate-900 dark:text-yellow-400 dark:hover:border-yellow-400"
+                >
+                    {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
+                </button>
+
+                <nav>
                 <section className="MOBILE-MENU flex lg:hidden">
                     <div
                         className="HAMBURGER-ICON space-y-2"
                         onClick={() => setIsNavOpen((prev) => !prev)}
                     >
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
-                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:text-gray-100"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:bg-gray-100"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:bg-gray-100"></span>
+                        <span className="block h-0.5 w-8 animate-pulse bg-gray-600 dark:bg-gray-100"></span>
                     </div>
 
                     <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -69,7 +104,7 @@ export default function NavBar({ handleNavigation}) {
                         </div>
 
                         {/* mobile  */}
-                        <ul className="flex flex-col items-center justify-between h-full w-full py-36 overflow-hidden dark:bg-darkNavbar">
+                        <ul className="flex h-full w-full flex-col items-center justify-between overflow-hidden py-36 dark:bg-slate-950">
                             {navList.map((item) => (
                                 <NavItem
                                     key={item.id}
@@ -88,7 +123,7 @@ export default function NavBar({ handleNavigation}) {
                 {/* desktop  */}
 
                 <ul
-                    className={`DESKTOP-MENU hidden space-x-8 lg:flex ${navBarStyle}`}
+                    className={`DESKTOP-MENU hidden items-center space-x-8 lg:flex ${navBarStyle}`}
                 >
                     {navList.map((item) => (
                         <NavItem
@@ -101,7 +136,8 @@ export default function NavBar({ handleNavigation}) {
                     ))}
                    
                 </ul>
-            </nav>
+                </nav>
+            </div>
         </div>
     );
 }

@@ -16,64 +16,85 @@ import Loader from "./components/loader/Loader.jsx";
 
 function App() {
     const [loading, setLoading] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            return savedTheme === "dark";
+        }
+
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    });
 
 
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 1000);
     }, []);
+
+    useEffect(() => {
+        document.documentElement.classList.toggle("dark", isDarkMode);
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    }, [isDarkMode]);
 
     const handleNavigation = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
         }
     };
     
 
     return (
-        <div className="w-screen h-screen overflow-x-hidden">
+        <div className="h-screen w-screen overflow-x-hidden bg-slate-50 text-slate-950 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-50">
             {loading ? (
-                <div className="h-screen w-screen flex justify-center items-center">
+                <div className="h-screen w-screen flex justify-center items-center bg-slate-50 dark:bg-slate-950">
                     <Loader />
                 </div>
             ) : (
                 <>
-                    <NavBar handleNavigation={handleNavigation} />
+                    <NavBar
+                        handleNavigation={handleNavigation}
+                        isDarkMode={isDarkMode}
+                        setIsDarkMode={setIsDarkMode}
+                    />
 
                     <div className="min-h-screen flex flex-col p-1">
                         <div className="absolute">
                             <ParticleBg
-                                bgColor="#fff"
-                                particleColor="#131B23"
+                                bgColor={isDarkMode ? "#020617" : "#f8fafc"}
+                                particleColor={isDarkMode ? "#facc15" : "#131B23"}
                             />
                         </div>
 
-                        <div id="home" className="h-screen relative">
+                        <div id="home" className="relative h-screen scroll-mt-24">
                             <HeroSection />
                         </div>
 
-                        <div id="about" className="relative">
+                        <div id="about" className="relative scroll-mt-28 pt-8">
                             <AboutSection />
                         </div>
 
-                        <div id="skills" className="relative">
+                        <div id="skills" className="relative scroll-mt-28 pt-8">
                             <SKillsSection />
                         </div>
 
-                        <div id="wip" className="relative">
+                        <div id="wip" className="relative scroll-mt-28 pt-8">
                             <PublicWork />
                         </div>
 
-                        <div id="project" className="relative">
+                        <div id="project" className="relative scroll-mt-28 pt-8">
                             <ProjectSection />
                         </div>
-                        <div id="blog" className="relative">
+                        <div id="blog" className="relative scroll-mt-28 pt-8">
                             <BlogSection />
                         </div>
 
-                        <div id="contact" className="relative">
+                        <div id="contact" className="relative scroll-mt-28 pt-8">
                             <ContactSection />
                         </div>
                     </div>

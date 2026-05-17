@@ -17,7 +17,7 @@ let projects = [
         id: 2,
         name: "Crypto Go",
         description:
-            "Android Application that provides RealTme Data of CryptoCurrency using REST API Features: real-time  z zdata of all crypto coins, searching, and saving your favorite coin. implemented pagination for efficient loading of data. Reduce network usage by 10% to 30%",
+            "Android application that provides real-time cryptocurrency data using REST APIs. Features include coin search, favorites, pagination for efficient loading, and reduced network usage through optimized data fetching.",
         github: "",
         youtube:
             "https://www.youtube.com/embed/NXhjTHmQio4?si=V3KsGe7sP8cNHFZ9",
@@ -72,7 +72,7 @@ let projects = [
         id: 5,
         name: "Link Wallet",
         description:
-            "A simple Google Chrome extension that is used to store all the important links like coding profles, github, linkedin, blog, personal portfolio etc. So that you can access it whenever your applying for your dream job.",
+            "A browser extension for storing important links such as coding profiles, GitHub, LinkedIn, blogs, and portfolios so they are easy to access during job applications.",
         github: "https://github.com/khan-mujeeb/Link-Wallet",
         youtube:
             "https://www.youtube.com/embed/ceXIlnw5CDU?si=-lyH3lvpTNijEyqt",
@@ -111,9 +111,9 @@ let projects = [
     
     {
         id: 7,
-        name: "Pallet Pro",
+        name: "Palette Pro",
         description:
-            "Palettepro allows users to dynamically generate color palettes from images or explore prebuilt palettes",
+            "Palette Pro helps users dynamically generate color palettes from images or explore prebuilt palettes for design inspiration.",
         github: "https://github.com/khan-mujeeb/Color-Palette",
         youtube:
             "https://www.youtube.com/embed/4W-0oCrlJiU?si=9_dzBQPQ4KSXAzog",
@@ -141,18 +141,6 @@ let projects = [
         executable: "#",
         type: "web",
     },
-
-    {
-        id: 9,
-        name: "Low Latency Logger",
-        description:
-            "A lightweight and efficient logging library, designed to minimize performance impact while providing robust logging capabilities.",
-        github: "https://github.com/khan-mujeeb/Low-Latency-Logge",
-        youtube: "",
-        skills: ["C++", "Threading"],
-        executable: "#",
-        type: "other",
-    }
 
 
 ];

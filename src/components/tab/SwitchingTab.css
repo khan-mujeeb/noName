@@ -1,41 +1,68 @@
 .switchingTabs {
-    height: 34px;
-    background-color: white;
-    border-radius: 20px;
-    padding: 2px;
+    background-color: rgb(255 255 255 / 0.88);
+    border: 1px solid rgb(226 232 240 / 0.9);
+    border-radius: 999px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgb(15 23 42 / 0.08);
 }
 
 .switchingTabs .tabItems {
     display: flex;
     align-items: center;
-    height: 30px;
-    position: relative;
+    gap: 0.75rem;
 }
 
 .switchingTabs .tabItems .tabItem {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    color: var(--black);
+    min-width: 128px;
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    color: rgb(71 85 105);
     font-size: 14px;
+    font-weight: 600;
     position: relative;
-    z-index: 1;
     cursor: pointer;
-    transition: color ease 0.3s;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .switchingTabs .tabItems .tabItem.active {
+    background-color: rgb(2 6 23);
     color: white;
+    box-shadow: 0 12px 24px rgb(15 23 42 / 0.16);
 }
 
-.switchingTabs .tabItems .movingBg {
-    height: 30px;
-    width: 100px;
-    border-radius: 15px;
-    background-image: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
-    position: absolute;
-    left: 0;
-    transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+.dark .switchingTabs {
+    background-color: rgb(15 23 42 / 0.82);
+    border-color: rgb(51 65 85 / 0.9);
+    box-shadow: none;
+}
+
+.dark .switchingTabs .tabItems .tabItem {
+    color: rgb(148 163 184);
+}
+
+.dark .switchingTabs .tabItems .tabItem.active {
+    background-color: rgb(250 204 21);
+    color: rgb(2 6 23);
+    box-shadow: none;
+}
+
+@media (max-width: 520px) {
+    .switchingTabs {
+        width: 100%;
+        max-width: 22rem;
+    }
+
+    .switchingTabs .tabItems {
+        gap: 0.35rem;
+    }
+
+    .switchingTabs .tabItems .tabItem {
+        flex: 1;
+        min-width: 0;
+        padding: 0.7rem 0.5rem;
+        font-size: 12px;
+    }
 }

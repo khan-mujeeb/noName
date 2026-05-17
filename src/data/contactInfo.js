@@ -7,8 +7,8 @@ let contactInfo = {
     dob: "18/02/2002",
     linkedIn: "mujeeb-ur-rahman-khan",
     education: "B.E Information Technology",
-    introduction: "I am currently working as a C++ Developer at TCS on projects related to the National Stock Exchange (NSE) trading systems. Along with that Previously, I have also worked on React and Android (Kotlin) development.",
-    connectMessage: "If you're interested in collaborating or have any inquiries, feel free to reach out. I'm eager to explore opportunities together"
+    introduction: "I am a Software Engineer at TCS. I worked for one year on National Stock Exchange trading systems and now contribute to the VIL CRM project. I also bring hands-on experience in React and native Android development with Kotlin.",
+    connectMessage: "I am open to software engineering opportunities, collaborations, and product-focused projects where enterprise experience, clean execution, and practical problem solving matter."
 
     
 };

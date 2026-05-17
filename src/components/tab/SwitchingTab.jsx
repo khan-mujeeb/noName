@@ -4,14 +4,10 @@ import "./SwitchingTab.css";
 
 const SwitchingTab = ({onTabChange}) => {
     const [activeTab, setActiveTab] = React.useState(0);
-    const [left, setLeft] = React.useState(0);
     const data = ["Play Store", "Extensions", "Paper Work"];
 
     const activeTabs = (tab, index) => {
-        setLeft(index * 100);
-        setTimeout(() => {
-            setActiveTab(index);
-        }, 200);
+        setActiveTab(index);
         onTabChange(tab, index);
     };
 
@@ -31,7 +27,6 @@ const SwitchingTab = ({onTabChange}) => {
                         </span>
                     );
                 })}
-                <span className="movingBg" style={{ left }} />
             </div>
         </div>
     );

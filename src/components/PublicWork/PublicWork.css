@@ -47,3 +47,31 @@
     background-repeat: no-repeat;
     background-image: url("../../assets/img/smartphone.png");
 }
+
+.featured-carousel .carousel .control-dots {
+    margin: 0;
+    bottom: -1.75rem;
+}
+
+.featured-carousel .carousel .control-dots .dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    background: rgb(100 116 139);
+    box-shadow: none;
+    opacity: 0.45;
+}
+
+.featured-carousel .carousel .control-dots .dot.selected {
+    width: 1.6rem;
+    border-radius: 999px;
+    background: rgb(2 6 23);
+    opacity: 1;
+}
+
+.dark .featured-carousel .carousel .control-dots .dot {
+    background: rgb(148 163 184);
+}
+
+.dark .featured-carousel .carousel .control-dots .dot.selected {
+    background: rgb(250 204 21);
+}

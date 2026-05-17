@@ -10,7 +10,7 @@ import { educationData } from "../../data/about.js";
 const AboutSection = () => {
     
     return (
-        <div id="about" className="lg:max-3xl:mt-32 h-full w-screen lg:max-3xl:gap-28 flex flex-col items-center justify-center gap-10">
+        <div className="lg:max-3xl:mt-32 h-full w-screen lg:max-3xl:gap-28 flex flex-col items-center justify-center gap-10">
 
             <PageTitle subTitle="Get To Know More" title="About Me" />
 
@@ -21,12 +21,12 @@ const AboutSection = () => {
                     <img src={dp} alt="" />
                 </div>
 
-                <div className="lg:max-3xl:w-[600px] w-80 backdrop-blur-sm p-4 rounded-xl">
-                    <Tabs>
-                        <TabList className="flex gap-4">
-                            <Tab >Personal Info</Tab>
-                            <Tab >Education</Tab>
-                            <Tab >Experience</Tab>
+                <div className="lg:max-3xl:w-[600px] w-80 rounded-2xl border border-slate-200 bg-white/70 p-4 shadow-sm backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/70">
+                    <Tabs selectedTabClassName="portfolio-tab-selected">
+                        <TabList className="portfolio-tab-list">
+                            <Tab className="portfolio-tab">Personal Info</Tab>
+                            <Tab className="portfolio-tab">Education</Tab>
+                            <Tab className="portfolio-tab">Experience</Tab>
                         </TabList>
 
                         {/* personal info */}

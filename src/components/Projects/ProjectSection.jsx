@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageTitle from "../PageTitle";
 import projects from "../../data/projectData";
 
@@ -7,8 +7,6 @@ import ProjectListItem from "./ProjectListItem.jsx";
 const ProjectSection = () => {
     const [type, setType] = useState("web");
     const [filteredProjects, setFilteredProjects] = useState(projects);
-
-    console.log(projects);
 
     useEffect(() => {
         setFilteredProjects(
@@ -21,38 +19,27 @@ const ProjectSection = () => {
             className="select-none flex flex-col items-center mt-28 "
         >
             <PageTitle title="Hobby Projects" subTitle="Browse My Recent" />
-            <div className="flex gap-10 mt-10">
+            <div className="flex gap-3 mt-10 rounded-full border border-slate-200 bg-white/80 p-2 shadow-sm backdrop-blur-md dark:border-slate-700 dark:bg-slate-900/80">
                 <button
-                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
-                    style={{
-                        backgroundColor: type === "web" ? "black" : "white",
-                        color: type === "web" ? "white" : "black",
-                    }}
+                    className={`rounded-full px-8 py-3 text-sm font-semibold transition-all duration-300 ${
+                        type === "web"
+                            ? "bg-slate-950 text-white shadow-md dark:bg-yellow-400 dark:text-slate-950"
+                            : "text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
+                    }`}
                     onClick={() => setType("web")}
                 >
                     Web
                 </button>
 
                 <button
-                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
-                    style={{
-                        backgroundColor: type === "android" ? "black" : "white",
-                        color: type === "android" ? "white" : "black",
-                    }}
+                    className={`rounded-full px-8 py-3 text-sm font-semibold transition-all duration-300 ${
+                        type === "android"
+                            ? "bg-slate-950 text-white shadow-md dark:bg-yellow-400 dark:text-slate-950"
+                            : "text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
+                    }`}
                     onClick={() => setType("android")}
                 >
                     Android
-                </button>
-
-                <button
-                    className="rounded-3xl p-3 border-black border-2 hover:bg-black hover:text-white transition-all duration-700 font-semibold"
-                    style={{
-                        backgroundColor: type === "other" ? "black" : "white",
-                        color: type === "other" ? "white" : "black",
-                    }}
-                    onClick={() => setType("other")}
-                >
-                    Other
                 </button>
             </div>
 

@@ -3,7 +3,7 @@ import React from "react";
 const SocialAccount = ({icon, url, title}) => {
     return (
         <a href={url} target="_blank" rel="noreferrer" className="flex">
-            <div className="lg:max-3xl:text-2xl relative bg-bg-secondary shadow-md dark:shadow-xl bg-blue-100 rounded-full  lg:max-3xl:h-16 lg:max-3xl:w-16 w-10 h-10 grid place-items-center group">
+            <div className="relative grid h-11 w-11 place-items-center rounded-full bg-white/10 text-lg text-white shadow-md transition hover:bg-white hover:text-slate-950 lg:max-3xl:h-14 lg:max-3xl:w-14 lg:max-3xl:text-xl group">
                 <span>
                     {icon}
                 </span>

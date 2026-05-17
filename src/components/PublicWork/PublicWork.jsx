@@ -7,11 +7,11 @@ import wip from "../../data/carosal.js";
 const PublicWork = () => {
     
     const [data, setData] = React.useState(wip[0]);
+    const [activeIndex, setActiveIndex] = React.useState(0);
 
-    const onTabChange = (tab, index) => {
+    const onTabChange = (_, index) => {
+        setActiveIndex(index);
         setData(wip[index] || []);
-        console.log(tab, index);
-        console.log(data);
     };
     
     return (
@@ -22,7 +22,7 @@ const PublicWork = () => {
             />
             <div className="flex w-full flex-col gap-10 items-center justify-center">
             <SwitchingTab  onTabChange={onTabChange}/>
-            <Carosal data={data}/>
+            <Carosal key={activeIndex} data={data}/>
             </div>
         </div>
     );
